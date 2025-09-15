@@ -39,7 +39,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
-                Teljesítmény Platformja
+                A Teljesítmény Platformja
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 A legmodernebb AI és a bevált edzői módszertanok kombinációja, hogy elérd a maximális potenciálodat.
