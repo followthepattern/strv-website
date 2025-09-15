@@ -23,7 +23,7 @@ export default function Home() {
                 href="#"
               >
                 <button
-                  className="rounded-xl bg-lime-600 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl space-x-2 flex"
+                  className="rounded-xl bg-gradient-to-r from-lime-600 via-lime-600 to-lime-500 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl space-x-3 flex"
                 >
                   <span>Felíratkozás</span>
                   <ArrowRight className="w-5 h-5" />
