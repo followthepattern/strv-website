@@ -18,14 +18,15 @@ export default function Home() {
             <p className="mt-4 text-lg sm:text-xl opacity-90 md:mx-30">
               AI támogatott produktivitás és coaching platform sportolóknak és edzőknek, akik minden edzésből és élethelyzetből a legtöbbet akarják kihozni.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex justify-center">
               <a
                 href="#"
               >
                 <button
-                  className="rounded-xl bg-lime-600 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl"
+                  className="rounded-xl bg-lime-600 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl space-x-2 flex"
                 >
-                  Felíratkozás
+                  <span>Felíratkozás</span>
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
             </div>
@@ -102,7 +103,7 @@ export default function Home() {
                 <button
                   className="rounded-xl bg-lime-600 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl flex space-x-2"
                 >
-                  <span>Get Notified When We Launch</span>
+                  <span>Kérek értesítést az indulásról</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
