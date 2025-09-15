@@ -1,3 +1,5 @@
+import { ArrowRight, Zap, Target, Trophy, Brain } from "lucide-react";
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -36,7 +38,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
-                Built for Champions
+                Champions Start Here
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Combining cutting-edge AI with proven coaching methodologies
@@ -47,38 +49,65 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  // icon: <Brain className="w-8 h-8" />,
+                  icon: <Brain className="w-8 h-8" />,
                   title: "Smarter Tracking, Simplified",
                   description: "Log your daily calories, workouts, sleep, and notes in one place — with clear reports that keep athletes and coaches aligned."
                 },
                 {
-                  // icon: <Target className="w-8 h-8" />,
+                  icon: <Target className="w-8 h-8" />,
                   title: "AI-Powered Nutrition & Insights",
                   description: "Snap a photo of your meal and let AI estimate calories instantly. Get personalized insights that adapt to your training goals."
                 },
                 {
-                  // icon: <Trophy className="w-8 h-8" />,
+                  icon: <Trophy className="w-8 h-8" />,
                   title: "Connected Coaching",
-                  description: "Automatic plan updates, WhatsApp notifications, and seamless calendar integration help coaches organize and athletes stay on track."
+                  description: "Notifications on on any updates, seamless calendar and whatsapp integrations help coaches organize and athletes stay on track."
                 },
                 {
-                  // icon: <Zap className="w-8 h-8" />,
+                  icon: <Zap className="w-8 h-8" />,
                   title: "Voice & Check-in Intelligence",
                   description: "Turn voice messages into text, generate meeting notes from check-in calls, and keep everything documented without extra effort."
                 }
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="text-center p-6 rounded-lg bg-card border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="text-left p-6 rounded-lg bg-gray-50 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
-                  <h3 className="text-xl font-semibold mb-2 text-heading">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-800 to-teal-950 rounded-full flex items-center justify-center mx-auto mb-8 text-white">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-heading">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="font-light text-gray-900/80">
                     {feature.description}
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+        <section className="py-24 px-6 bg-white text-black/80">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 text-heading">
+                Ready to Elevate Your Game?
+              </h2>
+              <p className="text-xl mb-8">
+                Join athletes and coaches who are already transforming
+                their performance with AI-powered training.
+              </p>
+              <a
+                href="#"
+                className="flex items-center justify-center"
+              >
+                <button
+                  className="rounded-xl bg-lime-600 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl flex space-x-2"
+                >
+                  <span>Get Notified When We Launch</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </a>
             </div>
           </div>
         </section>
