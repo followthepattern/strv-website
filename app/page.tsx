@@ -16,7 +16,7 @@ export default function Home() {
               Strive for Absolute Peak
             </h1>
             <p className="mt-4 text-lg sm:text-xl opacity-90 md:mx-30">
-              AI-powered productivity and coaching platform designed for athletes and coaches who demand excellence in every aspect of their training and life.
+              A productivity and coaching app with AI assistance — built for ambitious people and their coaches to stay organized, improve, and maximize their performance.
             </p>
             <div className="mt-8 flex justify-center">
               <a
