@@ -20,10 +20,11 @@ export default function Home() {
             </p>
             <div className="mt-8 flex justify-center">
               <a
-                href="#"
+                href="https://form.typeform.com/to/s9hOkcg5#s=strv-ai-hu"
+                target="_blank"
               >
                 <button
-                  className="rounded-xl bg-gradient-to-r from-lime-600 via-lime-600 to-lime-500 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl space-x-3 flex"
+                  className="rounded-xl bg-gradient-to-r from-lime-700 via-lime-600 to-lime-500 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl space-x-3 flex"
                 >
                   <span>Felíratkozás</span>
                   <ArrowRight className="w-5 h-5" />
@@ -97,11 +98,12 @@ export default function Home() {
                 Csatlakozz azokhoz a sportolókhoz és edzőkhöz, akik már AI-vezérelt edzéssel alakítják át teljesítményüket.
               </p>
               <a
-                href="#"
+                href="https://form.typeform.com/to/s9hOkcg5#s=strv-ai-hu-bottom"
+                target="_blank"
                 className="flex items-center justify-center"
               >
                 <button
-                  className="rounded-xl bg-lime-600 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl flex space-x-2"
+                  className="rounded-xl bg-teal-900 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl flex space-x-2"
                 >
                   <span>Kérek értesítést az indulásról</span>
                   <ArrowRight className="w-5 h-5" />
