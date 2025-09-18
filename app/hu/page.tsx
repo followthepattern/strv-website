@@ -62,7 +62,7 @@ export default function Home() {
                 {
                   icon: <Target className="w-8 h-8" />,
                   title: "Okosabb követés, egyszerűbben",
-                  description: "Kapj értesítéseket a kliens frissítésekről, zökkenőmentes naptár és WhatsApp integrációk segítenek szervezve maradni és klienst pályán tartani."
+                  description: "Kliensek egy helyen rögzítik az étkezéseket, edzéseket, alvást és jegyzeteket. Az átlátható riportok mindkettőtöknek segítenek a tervek betartásában és a fejlődés nyomon követésében."
                 },
                 {
                   icon: <Brain className="w-8 h-8" />,
