@@ -38,16 +38,16 @@ export default function Home() {
         </section>
         <section className="py-24 px-6 bg-white text-black/80">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-left md:text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
                 Everything You Need in One Place
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Track nutrition, workouts, and progress while streamlining client communication - all powered by AI.
+                Track nutrition, workouts, and progress while simplifying client communication - all powered by AI.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   icon: <Zap className="w-8 h-8" />,
@@ -90,7 +90,7 @@ export default function Home() {
         </section>
         <section className="py-24 px-6 bg-white text-black/80">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-left md:text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
                 Ready to Transform Your Performance?
               </h2>
