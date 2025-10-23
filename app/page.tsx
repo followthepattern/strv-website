@@ -1,6 +1,37 @@
+'use client'
+
 import { ArrowRight, Zap, Target, Trophy, Brain } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
+  const [msg, setMsg] = useState("");
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!consent) { setMsg("Please accept the privacy notice."); return; }
+    setStatus("loading"); setMsg("");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || "Subscription failed");
+      setStatus("ok");
+      
+      setMsg("Thanks! Check your inbox to confirm.");
+      setEmail("");
+      setConsent(false);
+    } catch (err: any) {
+      setStatus("error");
+      setMsg(err.message || "Something went wrong");
+    }
+  }
+
   return (
     <div className="min-h-screen">
       <main className="flex flex-col">
@@ -32,6 +63,41 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <form onSubmit={onSubmit} className="flex flex-col gap-3 max-w-md">
+            <input
+              type="email"
+              required
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border rounded px-3 py-2"
+            />
+            {/* GDPR consent */}
+            <label className="text-sm flex items-start gap-2">
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                className="mt-1"
+              />
+              <span>
+                I agree to receive emails and accept the{" "}
+                <a href="/privacy" className="underline">Privacy Policy</a>.
+              </span>
+            </label>
+            {/* Honeypot */}
+            <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="rounded px-4 py-2 bg-black text-white disabled:opacity-60"
+            >
+              {status === "loading" ? "Subscribing…" : "Subscribe"}
+            </button>
+            {msg && (
+              <p className={status === "error" ? "text-red-600" : "text-green-700"}>{msg}</p>
+            )}
+          </form>
           <div className="mt-8">
             <p className="opacity-70 text-center">Be the first to know when we launch. No spam, just performance.</p>
           </div>
