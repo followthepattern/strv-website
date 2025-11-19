@@ -22,7 +22,7 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || "Subscription failed");
       setStatus("ok");
-      
+
       setMsg("Thanks! Check your inbox to confirm.");
       setEmail("");
       setConsent(false);
@@ -44,60 +44,51 @@ export default function Home() {
 
           <div className="relative z-10 max-w-3xl mx-4">
             <h1 className="text-5xl font-extrabold sm:text-6xl md:animate-bounce [animation-duration:2s]">
-              AI-Powered Productivity & Coaching Platform
+              AI-Powered Fitness & Coaching Platform
             </h1>
             <p className="mt-4 text-lg sm:text-xl opacity-90 md:mx-30">
-              For ambitious people and their coaches who want to stay organized, improve, and maximize performance.
+              For ambitious people and their coaches who want to stay organized, build strength, gain muscle, and maximize performance.
             </p>
             <div className="mt-8 flex justify-center">
-              <a
-                href="https://form.typeform.com/to/Wtw0PPz1#s=strv-ai-en"
-                target="_blank"
-              >
+              <form onSubmit={onSubmit} className="flex flex-col gap-3 max-w-md">
+                <input
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="border rounded px-3 py-2"
+                />
+                {/* GDPR consent */}
+                <label className="text-sm flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    className="mt-1"
+                  />
+                  <span>
+                    I agree to receive emails and accept the{" "}
+                    <a href="/privacy" className="underline">Privacy Policy</a>.
+                  </span>
+                </label>
+                {/* Honeypot */}
+                <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
                 <button
-                  className="rounded-xl bg-gradient-to-r from-lime-700 via-lime-600 to-lime-600 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl space-x-3 flex"
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="rounded-xl bg-gradient-to-r from-lime-700 via-lime-600 to-lime-600 px-6 py-3 text-white cursor-pointer font-bold space-x-3 flex text-lg"
                 >
-                  <span>Join the Beta Waitlist</span>
-                  <ArrowRight className="w-5 h-5" />
+                  {status === "loading" ? "Subscribing…" : "Subscribe"}
+                  <div>Subscribe</div>
+                  <div></div>
                 </button>
-              </a>
+                {msg && (
+                  <p className={status === "error" ? "text-red-600" : "text-green-700"}>{msg}</p>
+                )}
+              </form>
             </div>
           </div>
-          <form onSubmit={onSubmit} className="flex flex-col gap-3 max-w-md">
-            <input
-              type="email"
-              required
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="border rounded px-3 py-2"
-            />
-            {/* GDPR consent */}
-            <label className="text-sm flex items-start gap-2">
-              <input
-                type="checkbox"
-                checked={consent}
-                onChange={(e) => setConsent(e.target.checked)}
-                className="mt-1"
-              />
-              <span>
-                I agree to receive emails and accept the{" "}
-                <a href="/privacy" className="underline">Privacy Policy</a>.
-              </span>
-            </label>
-            {/* Honeypot */}
-            <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="rounded px-4 py-2 bg-black text-white disabled:opacity-60"
-            >
-              {status === "loading" ? "Subscribing…" : "Subscribe"}
-            </button>
-            {msg && (
-              <p className={status === "error" ? "text-red-600" : "text-green-700"}>{msg}</p>
-            )}
-          </form>
           <div className="mt-8">
             <p className="opacity-70 text-center">Be the first to know when we launch. No spam, just performance.</p>
           </div>
