@@ -6,6 +6,7 @@ import SpinnerIcon from "./icons/SpinnerIcon";
 import classNames from "classnames";
 import { Card, Title, Body, FeatureFrame } from "./components/feature";
 import CalendarDayView from "./components/CalendarDayView";
+import VoiceToText from "./components/VoiceToText";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -145,8 +146,10 @@ export default function Home() {
                   <CalendarDayView />
                 </FeatureFrame>
               </div>
-              <div className="flex flex-col-reverse sm:flex-row gap-10 h-100">
-                <FeatureFrame />
+              <div className="flex flex-col-reverse sm:flex-row gap-10">
+                <FeatureFrame>
+                  <VoiceToText />
+                </FeatureFrame>
                 <Card className="sm:pl-5">
                   <Title>
                     AI Assistance
@@ -157,7 +160,7 @@ export default function Home() {
                   </Body>
                 </Card>
               </div>
-              <div className="flex flex-col sm:flex-row gap-10 h-100">
+              <div className="flex flex-col sm:flex-row gap-10">
                 <Card>
                   <Title>
                     Coaching & Communication

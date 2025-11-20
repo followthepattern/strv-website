@@ -45,7 +45,7 @@ interface FeatureFrameProps {
 
 export function FeatureFrame({ children, className }: FeatureFrameProps) {
     return (
-        <div className={classNames(className, "bg-sky-800/90 rounded-xl w-full h-100 basis-1/2 p-5 sm:p-10")}>
+        <div className={classNames(className, "bg-sky-800/90 rounded-xl w-full basis-1/2 p-5 sm:p-10")}>
             {children}
         </div>
     )
