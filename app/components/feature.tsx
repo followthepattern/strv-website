@@ -40,11 +40,12 @@ export function Body({ children, className }: BodyProps) {
 
 interface FeatureFrameProps {
     children?: any
+    className?: string
 }
 
-export function FeatureFrame({ children }: FeatureFrameProps) {
+export function FeatureFrame({ children, className }: FeatureFrameProps) {
     return (
-        <div className="bg-sky-800/90 rounded-xl w-full h-100 basis-1/2 p-10">
+        <div className={classNames(className, "bg-sky-800/90 rounded-xl w-full h-100 basis-1/2 p-5 sm:p-10")}>
             {children}
         </div>
     )

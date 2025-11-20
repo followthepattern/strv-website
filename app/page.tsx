@@ -5,6 +5,7 @@ import { useState } from "react";
 import SpinnerIcon from "./icons/SpinnerIcon";
 import classNames from "classnames";
 import { Card, Title, Body, FeatureFrame } from "./components/feature";
+import CalendarDayView from "./components/CalendarDayView";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -131,7 +132,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-12 sm:space-y-20">
-              <div className="flex flex-col sm:flex-row gap-10 h-100">
+              <div className="flex flex-col sm:flex-row gap-10">
                 <Card>
                   <Title>
                     Tracking & Performance
@@ -140,8 +141,8 @@ export default function Home() {
                     Plan your nutrition and supplements, log meals with photos, track your sleep and workouts, and follow your improvement through clear visual progress graphs.
                   </Body>
                 </Card>
-                <FeatureFrame>
-                  hello
+                <FeatureFrame className="h-[580px]">
+                  <CalendarDayView />
                 </FeatureFrame>
               </div>
               <div className="flex flex-col-reverse sm:flex-row gap-10 h-100">
@@ -171,7 +172,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-24 px-6 bg-white text-black/80">
+        <section className="pb-24 px-6 bg-white text-black/80">
           <div className="max-w-4xl mx-auto">
             <div className="text-left md:text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
