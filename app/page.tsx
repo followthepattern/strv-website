@@ -1,9 +1,10 @@
 'use client'
 
-import { ArrowRight, Zap, Target, Trophy, Brain } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import SpinnerIcon from "./icons/SpinnerIcon";
 import classNames from "classnames";
+import { Card, Title, Body, FeatureFrame } from "./components/feature";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -46,7 +47,7 @@ export default function Home() {
     <div className="min-h-screen">
       <main className="flex flex-col">
         <section className="relative flex flex-col py-22 p-2 sm:py-40 items-center text-left md:text-center bg-gradient-to-br from-sky-800 to-teal-950">
-          <div className="absolute inset-0 pointer-events-none bg-[url('/graphy-dark.png')] bg-repeat opacity-50"></div>
+          <div className="absolute inset-0 pointer-events-none bg-[url('/hexagons.png')] bg-repeat opacity-4"></div>
 
           <a href="/" className="absolute top-4 left-6 flex items-center space-x-2">
             <span className="sm:text-xl font-bold text-white">STRV.AI</span>
@@ -120,53 +121,53 @@ export default function Home() {
         </section>
         <section className="py-24 px-6 bg-white text-black/80">
           <div className="max-w-6xl mx-auto">
-            <div className="text-left md:text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 text-heading">
-                One platform. Smooth and simple. Unlimited potential.
+            <div className="text-left md:text-center mb-18 md:mb-36">
+              <h2 className="text-4xl font-bold mb-4 sm:mb-6 text-heading max-w-3xl mx-auto">
+                STRV AI brings nutrition, fitness, and coaching together in one smart
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                STRV.AI brings nutrition, fitness, and coaching together in one smart place so you can stay on track.
+              <p className="text-2xl font-light text-muted-foreground max-w-3xl mx-auto">
+                One platform. Smooth and simple. Unlimited potential.
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: <Zap className="w-8 h-8" />,
-                  title: "Voice & Check-in Intelligence",
-                  description: "Turn voice messages into text, generate meeting notes from check-in calls, and keep everything documented without extra effort."
-                },
-                {
-                  icon: <Trophy className="w-8 h-8" />,
-                  title: "Connected Coaching",
-                  description: "Get notified on client updates, seamless calendar and WhatsApp integrations help you stay organized and keep clients on track."
-                },
-                {
-                  icon: <Target className="w-8 h-8" />,
-                  title: "Smarter Tracking, Simplified",
-                  description: "Your clients log calories, workouts, sleep, and notes in one place — clear reports keep you both aligned on progress."
-                },
-                {
-                  icon: <Brain className="w-8 h-8" />,
-                  title: "AI-Powered Nutrition & Insights",
-                  description: "Clients snap photos of meals for instant calorie estimates. Get personalized insights that adapt to each client's training goals."
-                }
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="text-left p-6 rounded-lg bg-gray-50 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-800 to-teal-950 rounded-full flex items-center justify-center mx-auto mb-8 text-white">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4 text-heading">
-                    {feature.title}
-                  </h3>
-                  <p className="font-light text-gray-900/80">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
+            <div className="space-y-12 sm:space-y-20">
+              <div className="flex flex-col sm:flex-row gap-10 h-100">
+                <Card>
+                  <Title>
+                    Tracking & Performance
+                  </Title>
+                  <Body>
+                    Plan your nutrition and supplements, log meals with photos, track your sleep and workouts, and follow your improvement through clear visual progress graphs.
+                  </Body>
+                </Card>
+                <FeatureFrame>
+                  hello
+                </FeatureFrame>
+              </div>
+              <div className="flex flex-col-reverse sm:flex-row gap-10 h-100">
+                <FeatureFrame />
+                <Card className="sm:pl-5">
+                  <Title>
+                    AI Assistance
+                  </Title>
+                  <Body className="">
+                    AI makes tracking and coaching effortless: instantly estimate calories from meal photos, turn voice notes into organized logs,
+                    and receive session planning assistance. Smart notifications keep coaches informed and clients engaged.
+                  </Body>
+                </Card>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-10 h-100">
+                <Card>
+                  <Title>
+                    Coaching & Communication
+                  </Title>
+                  <Body>
+                    Coaches can manage sessions through calendar integration, communicate effortlessly with clients via WhatsApp or Telegram,
+                    and access shared profiles and performance data to guide training more effectively.
+                  </Body>
+                </Card>
+                <FeatureFrame />
+              </div>
             </div>
           </div>
         </section>
@@ -174,23 +175,65 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="text-left md:text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
-                Ready to Transform Your Performance?
+                Strive for Absolute Peak
               </h2>
-              <p className="text-xl mb-8">
-                Whether you're a coach managing clients or an athlete tracking your own progress - get first access to the platform that handles the details so you can focus on results
+              <p className="text-xl mb-10 max-w-3xl mx-auto">
+                Coaches and athletes are already on board. Join them and get early access, whether you’re a coach, athlete, or fitness lover.
               </p>
-              <a
-                href="https://form.typeform.com/to/Wtw0PPz1#s=strv-ai-en-bottom"
-                target="_blank"
-                className="flex items-center justify-center"
-              >
-                <button
-                  className="rounded-xl bg-teal-900 px-6 py-3 text-white cursor-pointer font-bold transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 shadow-xl flex space-x-2"
-                >
-                  <span>Get Early Access</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </a>
+              <div className="flex justify-center">
+                <form onSubmit={onSubmit} className="flex flex-col gap-3 max-w-md">
+                  <input
+                    type="name"
+                    required
+                    placeholder="Jon Jones"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="border rounded-lg text-lg px-3 py-2"
+                  />
+                  <input
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="border rounded-lg text-lg px-3 py-2"
+                  />
+                  {/* GDPR consent */}
+                  <label className="text-sm flex items-start gap-2">
+                    <input
+                      type="checkbox"
+                      checked={consent}
+                      onChange={(e) => setConsent(e.target.checked)}
+                      className="mt-1"
+                    />
+                    <span>
+                      I agree to receive emails and accept the{" "}
+                      <a href="/privacy" className="underline">Privacy Policy</a>.
+                    </span>
+                  </label>
+                  {/* Honeypot */}
+                  <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="rounded-xl bg-gradient-to-r bg-sky-900 hover:bg-sky-700 active:bg-sky-950 shadom-md px-6 py-3 text-white cursor-pointer font-bold space-x-3 flex text-lg justify-between"
+                  >
+                    <div className="w-5"></div>
+                    <div className="text-center grow">Subscribe for Early Access</div>
+                    <div className="w-5 flex items-center justify-end">
+                      {status === 'loading' && (<SpinnerIcon className="h-6 w-6" />)}
+                    </div>
+                  </button>
+                  {msg && (
+                    <p className={classNames(
+                      "p-1 rounded-md text-center", {
+                      "text-red-600": status === "error",
+                      "text-green-700": status !== "error"
+                    }
+                    )}>{msg}</p>
+                  )}
+                </form>
+              </div>
             </div>
           </div>
         </section>
