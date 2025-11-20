@@ -2,22 +2,31 @@
 
 import { ArrowRight, Zap, Target, Trophy, Brain } from "lucide-react";
 import { useState } from "react";
+import SpinnerIcon from "./icons/SpinnerIcon";
+import classNames from "classnames";
 
 export default function Home() {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [msg, setMsg] = useState("");
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!consent) { setMsg("Please accept the privacy notice."); return; }
+    if (!consent) {
+      setStatus("error");
+      setMsg("Please accept the privacy notice."); return;
+    }
     setStatus("loading"); setMsg("");
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email: email,
+          name: name,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || "Subscription failed");
@@ -25,6 +34,7 @@ export default function Home() {
 
       setMsg("Thanks! Check your inbox to confirm.");
       setEmail("");
+      setName("");
       setConsent(false);
     } catch (err: any) {
       setStatus("error");
@@ -49,15 +59,23 @@ export default function Home() {
             <p className="mt-4 text-lg sm:text-xl opacity-90 md:mx-30">
               For ambitious people and their coaches who want to stay organized, build strength, gain muscle, and maximize performance.
             </p>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex sm:justify-center">
               <form onSubmit={onSubmit} className="flex flex-col gap-3 max-w-md">
+                <input
+                  type="name"
+                  required
+                  placeholder="Jon Jones"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="border rounded-lg text-lg px-3 py-2"
+                />
                 <input
                   type="email"
                   required
                   placeholder="you@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border rounded px-3 py-2"
+                  className="border rounded-lg text-lg px-3 py-2"
                 />
                 {/* GDPR consent */}
                 <label className="text-sm flex items-start gap-2">
@@ -77,19 +95,26 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="rounded-xl bg-gradient-to-r from-lime-700 via-lime-600 to-lime-600 px-6 py-3 text-white cursor-pointer font-bold space-x-3 flex text-lg"
+                  className="rounded-xl bg-gradient-to-r bg-lime-700 hover:bg-lime-600 active:bg-lime-900 shadom-md px-6 py-3 text-white cursor-pointer font-bold space-x-3 flex text-lg justify-between"
                 >
-                  {status === "loading" ? "Subscribing…" : "Subscribe"}
-                  <div>Subscribe</div>
-                  <div></div>
+                  <div className="w-5"></div>
+                  <div className="text-center grow">Subscribe for Early Access</div>
+                  <div className="w-5 flex items-center justify-end">
+                    {status === 'loading' && (<SpinnerIcon className="h-6 w-6" />)}
+                  </div>
                 </button>
                 {msg && (
-                  <p className={status === "error" ? "text-red-600" : "text-green-700"}>{msg}</p>
+                  <p className={classNames(
+                    "bg-white p-1 rounded-md text-center", {
+                    "text-red-600": status === "error",
+                    "text-green-700": status !== "error"
+                  }
+                  )}>{msg}</p>
                 )}
               </form>
             </div>
           </div>
-          <div className="mt-8">
+          <div className="mt-4">
             <p className="opacity-70 text-center">Be the first to know when we launch. No spam, just performance.</p>
           </div>
         </section>
@@ -97,10 +122,10 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-left md:text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
-                Everything You Need in One Place
+                One platform. Zero friction. Unlimited potential.
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Track nutrition, workouts, and progress while simplifying client communication - all powered by AI.
+                STRV.AI combines nutrition, fitness, and coaching in one smart place — saving time and helping coaches and clients work together smoothly.
               </p>
             </div>
 

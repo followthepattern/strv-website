@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { email } = await req.json();
+    const { email, name } = await req.json();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
@@ -20,6 +20,9 @@ export async function POST(req: Request) {
         email,
         listIds: [Number(process.env.BREVO_LIST_ID)],
         updateEnabled: true,
+        attributes: {
+          FIRSTNAME: name || "",
+        },
       }),
     });
 
