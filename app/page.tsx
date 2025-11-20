@@ -122,10 +122,10 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-left md:text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 text-heading">
-                One platform. Zero friction. Unlimited potential.
+                One platform. Smooth and simple. Unlimited potential.
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                STRV.AI combines nutrition, fitness, and coaching in one smart place — saving time and helping coaches and clients work together smoothly.
+                STRV.AI brings nutrition, fitness, and coaching together in one smart place so you can stay on track.
               </p>
             </div>
 
