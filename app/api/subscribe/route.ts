@@ -1,5 +1,6 @@
 // app/api/subscribe/route.ts
 import { NextResponse } from "next/server";
+import { STRV_EN_LIST_ID, STRV_HU_LIST_ID } from "./const";
 
 export async function POST(req: Request) {
   try {
@@ -24,9 +25,9 @@ export async function POST(req: Request) {
     let listId: number
 
     if (locale === "hu") {
-      listId = Number(process.env.BREVO_LIST_ID)
+      listId = STRV_HU_LIST_ID
     } else {
-      listId = Number(process.env.BREVO_LIST_ID)
+      listId = STRV_EN_LIST_ID
     }
 
     const res = await fetch("https://api.brevo.com/v3/contacts", {
