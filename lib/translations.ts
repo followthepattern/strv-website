@@ -21,7 +21,7 @@ export const translations = {
     subscriptionSuccess: 'Thanks! Check your inbox to confirm.',
 
     // Features Section
-    featuresTitle: 'STRV AI brings nutrition, fitness, and coaching together in one smart',
+    featuresTitle: 'STRV AI brings nutrition, fitness, and coaching together in one smart platform',
     featuresSubtitle: 'One platform. Smooth and simple. Unlimited potential.',
 
     // Feature Cards
@@ -49,7 +49,7 @@ export const translations = {
     heroTitle: 'AI Támogatott Fitness és Coaching Platform',
     heroDescription: 'Ambiciózus emberek és edzőik számára, akik szervezettek akarnak maradni, erőt építeni, izomtömeget növelni és maximalizálni a teljesítményüket.',
     subscribeButton: 'Feliratkozás Korai Hozzáférésért',
-    earlyAccessNote: 'Légy az elsők között, aki értesül az indulásról. Nincs spam, csak teljesítmény.',
+    earlyAccessNote: 'Légy az elsők között, aki értesül az indulásról. Nem spam, csak teljesítmény.',
 
     // Form Fields
     namePlaceholder: 'Kovács János',
@@ -61,8 +61,8 @@ export const translations = {
     subscriptionSuccess: 'Köszönjük! Ellenőrizd a beérkező leveleidet a megerősítéshez.',
 
     // Features Section
-    featuresTitle: 'A STRV AI egyesíti a táplálkozást, fitneszt és coachingot egy okos rendszerben',
-    featuresSubtitle: 'Egy platform. Zökkenőmentes és egyszerű. Korlátlan lehetőségek.',
+    featuresTitle: 'Táplálkozás, fitnesz és coaching egy intelligens platformon.',
+    featuresSubtitle: 'Minden az egyben. Letisztult élmény. Korlátlan lehetőségek.',
 
     // Feature Cards
     trackingTitle: 'Követés és Teljesítmény',
