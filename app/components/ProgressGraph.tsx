@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import {
   LineChart,
@@ -10,6 +12,7 @@ import {
   CartesianGrid,
 } from "recharts";
 import { TrendingUp, Dumbbell, Scale } from 'lucide-react';
+import { useTranslation } from "@/hooks/useTranslation";
 
 type ProgressPoint = {
   week: string;
@@ -28,6 +31,8 @@ const data: ProgressPoint[] = [
 ];
 
 export default function ProgressGraph() {
+  const { t } = useTranslation();
+
   // Calculate improvements
   const squatImprovement = data[data.length - 1].squat - data[0].squat;
   const weightChange = data[data.length - 1].bodyWeight - data[0].bodyWeight;
@@ -38,8 +43,8 @@ export default function ProgressGraph() {
     <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden h-full flex flex-col">
       {/* Header */}
       <div className="bg-gray-50 border-b border-gray-200 px-4 py-3">
-        <h3 className="text-lg font-semibold text-gray-900">Progress Tracking</h3>
-        <p className="text-xs text-gray-500 mt-1">7-week performance overview</p>
+        <h3 className="text-lg font-semibold text-gray-900">{t("progressGraphTitle")}</h3>
+        <p className="text-xs text-gray-500 mt-1">{t("progressGraphSubtitle")}</p>
       </div>
 
       {/* Stats Cards */}
@@ -49,11 +54,11 @@ export default function ProgressGraph() {
             <div className="w-6 h-6 bg-blue-800 rounded flex items-center justify-center">
               <Dumbbell className="w-3 h-3 text-white" />
             </div>
-            <span className="text-xs font-semibold text-gray-700">Squat 1RM</span>
+            <span className="text-xs font-semibold text-gray-700">{t("progressGraphSquat")}</span>
           </div>
           <div className="flex items-baseline gap-1">
             <span className="text-2xl font-bold text-gray-900">{data[data.length - 1].squat}</span>
-            <span className="text-xs text-gray-500">kg</span>
+            <span className="text-xs text-gray-500">{t("progressGraphKg")}</span>
           </div>
           <div className="flex items-center gap-1 mt-1">
             <TrendingUp className="w-3 h-3 text-green-600" />
@@ -66,11 +71,11 @@ export default function ProgressGraph() {
             <div className="w-6 h-6 bg-sky-800 rounded flex items-center justify-center">
               <Scale className="w-3 h-3 text-white" />
             </div>
-            <span className="text-sm font-semibold text-gray-700">Body Weight</span>
+            <span className="text-sm font-semibold text-gray-700">{t("progressGraphBodyWeight")}</span>
           </div>
           <div className="flex items-baseline gap-1">
             <span className="text-2xl font-bold text-gray-900">{data[data.length - 1].bodyWeight}</span>
-            <span className="text-xs text-gray-500">kg</span>
+            <span className="text-xs text-gray-500">{t("progressGraphKg")}</span>
           </div>
           <div className="flex items-center gap-1 mt-1">
             <TrendingUp className="w-3 h-3 text-green-600 rotate-180" />
@@ -111,7 +116,7 @@ export default function ProgressGraph() {
             <Line
               type="monotone"
               dataKey="squat"
-              name="Squat 1RM (kg)"
+              name={t("progressGraphSquatLegend")}
               stroke="#82ca9d"
               strokeWidth={3}
               dot={{ r: 4, fill: '#82ca9d', strokeWidth: 2, stroke: 'white' }}
@@ -122,7 +127,7 @@ export default function ProgressGraph() {
             <Line
               type="monotone"
               dataKey="bodyWeight"
-              name="Body Weight (kg)"
+              name={t("progressGraphBodyWeightLegend")}
               stroke="#8884d8"
               strokeWidth={3}
               strokeDasharray="5 5"
@@ -140,7 +145,7 @@ export default function ProgressGraph() {
             <div className="w-4 h-0.5 bg-[#82ca9d]"></div>
             <div className="w-2 h-2 bg-[#82ca9d] rounded-full border-2 border-white shadow-sm"></div>
           </div>
-          <span className="text-gray-600">Strength ↑</span>
+          <span className="text-gray-600">{t("progressGraphStrength")} ↑</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
@@ -149,7 +154,7 @@ export default function ProgressGraph() {
             </svg>
             <div className="w-2 h-2 bg-[#8884d8] rounded-full border-2 border-white shadow-sm"></div>
           </div>
-          <span className="text-gray-600">Weight ↓</span>
+          <span className="text-gray-600">{t("progressGraphWeight")} ↓</span>
         </div>
       </div>
     </div>

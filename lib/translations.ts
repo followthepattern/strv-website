@@ -45,6 +45,17 @@ export const translations = {
     contactSupportTitle: 'Support',
     contactSupportDescription: 'Our team is ready to assist you with any questions.',
 
+    // Progress Graph
+    progressGraphTitle: 'Progress Tracking',
+    progressGraphSubtitle: '7-week performance overview',
+    progressGraphSquat: 'Squat 1RM',
+    progressGraphBodyWeight: 'Body Weight',
+    progressGraphKg: 'kg',
+    progressGraphSquatLegend: 'Squat 1RM (kg)',
+    progressGraphBodyWeightLegend: 'Body Weight (kg)',
+    progressGraphStrength: 'Strength',
+    progressGraphWeight: 'Weight',
+
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Built for champions.',
   },
@@ -91,6 +102,17 @@ export const translations = {
     contactEmailTitle: 'Email',
     contactSupportTitle: 'Támogatás',
     contactSupportDescription: 'Csapatunk készen áll, hogy segítsen bármilyen kérdésben.',
+
+    // Progress Graph
+    progressGraphTitle: 'Fejlődés Követés',
+    progressGraphSubtitle: '7 hetes teljesítmény áttekintés',
+    progressGraphSquat: 'Guggolás 1RM',
+    progressGraphBodyWeight: 'Testsúly',
+    progressGraphKg: 'kg',
+    progressGraphSquatLegend: 'Guggolás 1RM (kg)',
+    progressGraphBodyWeightLegend: 'Testsúly (kg)',
+    progressGraphStrength: 'Erő',
+    progressGraphWeight: 'Testsúly',
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',
