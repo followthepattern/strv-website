@@ -38,6 +38,13 @@ export const translations = {
     ctaTitle: 'Strive for Absolute Peak',
     ctaDescription: 'Coaches and athletes are already on board. Join them and get early access, whether you\'re a coach, athlete, or fitness lover.',
 
+    // Contact Section
+    contactTitle: 'Get in Touch',
+    contactDescription: 'Have questions or want to learn more? We\'re here to help you achieve peak performance.',
+    contactEmailTitle: 'Email Us',
+    contactSupportTitle: 'Support',
+    contactSupportDescription: 'Our team is ready to assist you with any questions.',
+
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Built for champions.',
   },
@@ -77,6 +84,13 @@ export const translations = {
     // Bottom CTA Section
     ctaTitle: 'Törekedj az Abszolút Csúcsra',
     ctaDescription: 'Edzők és sportolók már csatlakoztak. Légy te is közöttük, és szerezz korai hozzáférést, akár ha edző, sportoló vagy fitneszrajongó vagy.',
+
+    // Contact Section
+    contactTitle: 'Lépj Kapcsolatba',
+    contactDescription: 'Kérdésed van, vagy többet szeretnél megtudni? Segítünk!',
+    contactEmailTitle: 'Email',
+    contactSupportTitle: 'Támogatás',
+    contactSupportDescription: 'Csapatunk készen áll, hogy segítsen bármilyen kérdésben.',
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',

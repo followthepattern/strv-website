@@ -5,6 +5,7 @@ import { Card, Title, Body, FeatureFrame } from "./feature";
 import CalendarDayView from "./CalendarDayView";
 import VoiceToText from "./VoiceToText";
 import ProgressGraph from "./ProgressGraph";
+import ContactSection from "./ContactSection";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { usePathname } from "next/navigation";
@@ -248,6 +249,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <ContactSection />
       </main>
       <footer className="my-5 flex items-center justify-center">
         <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} {t("footerCopyright")}</p>
