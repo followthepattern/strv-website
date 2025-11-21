@@ -7,6 +7,7 @@ import classNames from "classnames";
 import { Card, Title, Body, FeatureFrame } from "./components/feature";
 import CalendarDayView from "./components/CalendarDayView";
 import VoiceToText from "./components/VoiceToText";
+import ProgressGraph from "./components/ProgressGraph";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -143,7 +144,7 @@ export default function Home() {
                   </Body>
                 </Card>
                 <FeatureFrame className="h-[580px]">
-                  <CalendarDayView />
+                  <ProgressGraph />
                 </FeatureFrame>
               </div>
               <div className="flex flex-col-reverse sm:flex-row gap-10">
@@ -170,7 +171,9 @@ export default function Home() {
                     and access shared profiles and performance data to guide training more effectively.
                   </Body>
                 </Card>
-                <FeatureFrame />
+                <FeatureFrame>
+                  <CalendarDayView />
+                </FeatureFrame>
               </div>
             </div>
           </div>
