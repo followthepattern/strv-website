@@ -61,7 +61,8 @@ export default function Home() {
                     <div className="absolute inset-0 pointer-events-none bg-[url('/hexagons.png')] bg-repeat opacity-4"></div>
 
                     <div className="absolute top-0 left-0 flex justify-between w-full px-6 pt-4">
-                        <a href="/" className="flex items-center space-x-2">
+                        <a href="/" className="flex items-center">
+                            <img src="/strv-white.svg" alt="STRV Logo" className="h-8 w-8 sm:h-12 sm:w-12" />
                             <span className="sm:text-xl font-bold text-white">{t("siteTitle")}</span>
                         </a>
                         <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/hu" : "/"}>
