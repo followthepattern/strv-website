@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "STRV AI",
-  description: "AI Powered Performance App",
+  description: "AI Powered Fitness & Coaching App",
 };
 
 export default function RootLayout({
