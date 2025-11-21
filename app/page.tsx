@@ -1,6 +1,5 @@
 'use client'
 
-import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import SpinnerIcon from "./icons/SpinnerIcon";
 import classNames from "classnames";
@@ -91,7 +90,7 @@ export default function Home() {
                   />
                   <span>
                     I agree to receive emails and accept the{" "}
-                    <a href="/privacy" className="underline">Privacy Policy</a>.
+                    <a href="/privacy" className="underline" target="_blank">Privacy Policy</a>.
                   </span>
                 </label>
                 {/* Honeypot */}
@@ -215,7 +214,7 @@ export default function Home() {
                     />
                     <span>
                       I agree to receive emails and accept the{" "}
-                      <a href="/privacy" className="underline">Privacy Policy</a>.
+                      <a href="/privacy" className="underline" target="_blank">Privacy Policy</a>.
                     </span>
                   </label>
                   {/* Honeypot */}
