@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
-    const { email, name } = await req.json();
+    const { email, name, locale } = await req.json();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
@@ -21,6 +21,14 @@ export async function POST(req: Request) {
     const firstName = names[0];
     const lastName = names.slice(1, names.length).join(" ");
 
+    let listId: number
+
+    if (locale === "hu") {
+      listId = Number(process.env.BREVO_LIST_ID)
+    } else {
+      listId = Number(process.env.BREVO_LIST_ID)
+    }
+
     const res = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
@@ -30,7 +38,7 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         email,
-        listIds: [Number(process.env.BREVO_LIST_ID)],
+        listIds: [Number(listId)],
         updateEnabled: true,
         attributes: {
           FIRSTNAME: firstName,

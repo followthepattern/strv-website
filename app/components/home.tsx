@@ -6,9 +6,12 @@ import CalendarDayView from "./CalendarDayView";
 import VoiceToText from "./VoiceToText";
 import ProgressGraph from "./ProgressGraph";
 import { useTranslation } from "@/hooks/useTranslation";
+import { getLocaleFromPath } from "@/lib/i18n";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
   const { t } = useTranslation();
+  const pathname = usePathname();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [consent, setConsent] = useState(false);
@@ -22,6 +25,9 @@ export default function Home() {
       setMsg(t("consentError")); return;
     }
     setStatus("loading"); setMsg("");
+
+    const locale = getLocaleFromPath(pathname);
+
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
@@ -29,6 +35,7 @@ export default function Home() {
         body: JSON.stringify({
           email: email,
           name: name,
+          locale: locale,
         }),
       });
       const data = await res.json();
@@ -98,12 +105,12 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="rounded-xl bg-gradient-to-r bg-lime-700 hover:bg-lime-600 active:bg-lime-900 shadom-md px-6 py-3 text-white cursor-pointer font-bold space-x-3 flex text-lg justify-between"
+                  className="rounded-xl bg-gradient-to-r bg-lime-700 hover:bg-lime-600 active:bg-lime-900 shadom-md px-4 space-x-1 py-3 text-white cursor-pointer font-bold flex text-lg justify-between"
                 >
                   <div className="w-5"></div>
                   <div className="text-center grow">{t("subscribeButton")}</div>
                   <div className="w-5 flex items-center justify-end">
-                    {status === 'loading' && (<SpinnerIcon className="h-6 w-6" />)}
+                    {status === 'loading' && (<SpinnerIcon className="h-5 w-5" />)}
                   </div>
                 </button>
                 {msg && (
@@ -220,12 +227,12 @@ export default function Home() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="rounded-xl bg-gradient-to-r bg-sky-900 hover:bg-sky-700 active:bg-sky-950 shadom-md px-6 py-3 text-white cursor-pointer font-bold space-x-3 flex text-lg justify-between"
+                    className="rounded-xl bg-gradient-to-r bg-sky-900 hover:bg-sky-700 active:bg-sky-950 shadom-md px-4 py-3 text-white cursor-pointer font-bold flex text-lg justify-between"
                   >
                     <div className="w-5"></div>
                     <div className="text-center grow">{t("subscribeButton")}</div>
                     <div className="w-5 flex items-center justify-end">
-                      {status === 'loading' && (<SpinnerIcon className="h-6 w-6" />)}
+                      {status === 'loading' && (<SpinnerIcon className="h-5 w-5" />)}
                     </div>
                   </button>
                   {msg && (

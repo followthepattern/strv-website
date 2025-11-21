@@ -32,7 +32,7 @@ export const translations = {
     aiAssistanceBody: 'AI makes tracking and coaching effortless: instantly estimate calories from meal photos, turn voice notes into organized logs, and receive session planning assistance. Smart notifications keep coaches informed and clients engaged.',
 
     coachingTitle: 'Coaching & Communication',
-    coachingBody: 'Coaches can manage sessions through calendar integration, communicate effortlessly with clients via WhatsApp or Telegram, and access shared profiles and performance data to guide training more effectively.',
+    coachingBody: 'Calendar integration and the sharing of plans, data, and profiles make communication between coaches and athletes easier. WhatsApp and Telegram integrations enable fast and seamless delivery of notifications.',
 
     // Bottom CTA Section
     ctaTitle: 'Strive for Absolute Peak',
@@ -48,7 +48,7 @@ export const translations = {
     // Hero Section
     heroTitle: 'AI Támogatott Fitness és Coaching Platform',
     heroDescription: 'Ambiciózus emberek és edzőik számára, akik szervezettek akarnak maradni, erőt építeni, izomtömeget növelni és maximalizálni a teljesítményüket.',
-    subscribeButton: 'Feliratkozás Korai Hozzáférésért',
+    subscribeButton: 'Biztosítom a helyem',
     earlyAccessNote: 'Légy az elsők között, aki értesül az indulásról. Nem spam, csak teljesítmény.',
 
     // Form Fields
@@ -65,20 +65,20 @@ export const translations = {
     featuresSubtitle: 'Minden az egyben. Letisztult élmény. Korlátlan lehetőségek.',
 
     // Feature Cards
-    trackingTitle: 'Követés és Teljesítmény',
-    trackingBody: 'Tervezd meg a táplálkozásod és kiegészítőidet, naplózd az étkezéseket fotókkal, kövesd nyomon az alvásodat és edzéseidet, és figyeld meg a fejlődésedet áttekinthető vizuális grafikonokon keresztül.',
+    trackingTitle: 'Fejlődés követés',
+    trackingBody: 'Tervezd meg a táplálkozásod, naplózd az étkezéseket, kövesd nyomon az alvásodat, edzéseidet és fejlődésedet áttekinthető vizuális grafikonokon keresztül.',
 
-    aiAssistanceTitle: 'AI Asszisztencia',
-    aiAssistanceBody: 'Az AI egyszerűvé teszi a követést és coachingot: azonnal becsüld meg a kalóriákat az étkezések fotóiból, alakítsd át a hangüzeneteket rendezett naplókká, és kapj segítséget az edzéstervezésben. Az okos értesítések segítenek az edzőknek tájékozottnak maradni és a klienseknek elkötelezettnek.',
+    aiAssistanceTitle: 'AI Támogatás',
+    aiAssistanceBody: 'Az AI egyszerűvé teszi a napi adminisztrációt: megbecsüli a kalóriákat az étkezések fotóiból, a hangüzeneteket rendezett naplókká alakítja, és segítséget nyújt az edzéstervezésben. Az okos értesítések támogatják az edzőket abban, hogy naprakészek maradjanak, a klienseket pedig abban, hogy elkötelezettek legyenek.',
 
-    coachingTitle: 'Coaching és Kommunikáció',
-    coachingBody: 'Az edzők kezelhetik az edzéseket naptárintegrációval, könnyedén kommunikálhatnak a kliensekkel WhatsApp-on vagy Telegramon keresztül, és hozzáférhetnek a megosztott profilokhoz és teljesítményadatokhoz a hatékonyabb edzésvezetés érdekében.',
+    coachingTitle: 'Coaching & Kommunikáció',
+    coachingBody: 'A naptárintegráció, a tervek, adatok és profilok megosztása egyszerűbbé teszi az edzők és atléták közötti kommunikációt. A WhatsApp- és Telegram-integráció pedig lehetővé teszi az értesítések gyors és zökkenőmentes küldését.',
 
     // Bottom CTA Section
     ctaTitle: 'Törekedj az Abszolút Csúcsra',
-    ctaDescription: 'Edzők és sportolók már fedélzeten vannak. Csatlakozz hozzájuk és szerezz korai hozzáférést, akár edző, sportoló vagy fitness rajongó vagy.',
+    ctaDescription: 'Edzők és sportolók már csatlakoztak. Légy te is közöttük, és szerezz korai hozzáférést, akár ha edző, sportoló vagy fitneszrajongó vagy.',
 
     // Footer
-    footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak építve.',
+    footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',
   }
 } as const;
