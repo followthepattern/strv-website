@@ -70,6 +70,18 @@ export const translations = {
     voiceToTextCategoryNutrition: 'nutrition',
     voiceToTextCategorySchedule: 'schedule',
 
+    // Calendar Day View
+    calendarToday: 'Today',
+    calendarEvent1: 'Morning Cardio',
+    calendarEvent2: 'Nutrition Planning',
+    calendarEvent3: 'Client Check-in: Sarah M.',
+    calendarEvent4: 'Strength Training',
+    calendarEvent5: 'Client Session: John D.',
+    calendarEvent6: 'Meal Prep',
+    calendarLegendTraining: 'Training',
+    calendarLegendCoaching: 'Coaching',
+    calendarLegendActivity: 'Activity',
+
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Built for champions.',
   },
@@ -141,6 +153,18 @@ export const translations = {
     voiceToTextCategoryTraining: 'edzés',
     voiceToTextCategoryNutrition: 'táplálkozás',
     voiceToTextCategorySchedule: 'beosztás',
+
+    // Calendar Day View
+    calendarToday: 'Ma',
+    calendarEvent1: 'Reggeli Kardió',
+    calendarEvent2: 'Táplálkozás Tervezés',
+    calendarEvent3: 'Kliens Check-in: Minta Sára',
+    calendarEvent4: 'Erősítő Edzés',
+    calendarEvent5: 'Kliens Edzés: Kovács János',
+    calendarEvent6: 'Étkezés Előkészítés',
+    calendarLegendTraining: 'Edzés',
+    calendarLegendCoaching: 'Coaching',
+    calendarLegendActivity: 'Aktivitás',
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',
