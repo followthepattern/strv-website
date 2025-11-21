@@ -56,6 +56,20 @@ export const translations = {
     progressGraphStrength: 'Strength',
     progressGraphWeight: 'Weight',
 
+    // Voice to Text
+    voiceToTextTitle: 'Voice Note Processing',
+    voiceToTextSubtitle: 'AI-powered transcription & insights',
+    voiceToTextProcessing: 'Processing...',
+    voiceToTextUser: 'Sarah M. • Just now',
+    voiceToTextActionItems: 'Action Items Detected',
+    voiceToTextItems: 'items',
+    voiceToTextAction1: 'Increase squat weight to 225 lbs',
+    voiceToTextAction2: 'Target 2,800 calories daily',
+    voiceToTextAction3: 'Schedule check-in for Friday 3 PM',
+    voiceToTextCategoryTraining: 'training',
+    voiceToTextCategoryNutrition: 'nutrition',
+    voiceToTextCategorySchedule: 'schedule',
+
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Built for champions.',
   },
@@ -113,6 +127,20 @@ export const translations = {
     progressGraphBodyWeightLegend: 'Testsúly (kg)',
     progressGraphStrength: 'Erő',
     progressGraphWeight: 'Testsúly',
+
+    // Voice to Text
+    voiceToTextTitle: 'Hangüzenet Feldolgozás',
+    voiceToTextSubtitle: 'AI alapú átírás és elemzés',
+    voiceToTextProcessing: 'Feldolgozás...',
+    voiceToTextUser: 'Minta Sára • Most',
+    voiceToTextActionItems: 'Feladatok',
+    voiceToTextItems: 'elem',
+    voiceToTextAction1: 'Guggolás súly növelése 102 kg-ra',
+    voiceToTextAction2: 'Napi 2800 kalória cél',
+    voiceToTextAction3: 'Pénteki 15 órás check-in időpont',
+    voiceToTextCategoryTraining: 'edzés',
+    voiceToTextCategoryNutrition: 'táplálkozás',
+    voiceToTextCategorySchedule: 'beosztás',
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',
