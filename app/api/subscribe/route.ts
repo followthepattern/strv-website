@@ -9,6 +9,18 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
 
+    if (typeof name !== "string") {
+      return NextResponse.json({ error: "Invalid name" }, { status: 400 });
+    }
+
+    if (name.length < 1) {
+      NextResponse.json({ error: "Invalid name" }, { status: 400 });
+    }
+
+    const names = name.split(" ");
+    const firstName = names[0];
+    const lastName = names.slice(1, names.length).join(" ");
+
     const res = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
@@ -21,7 +33,8 @@ export async function POST(req: Request) {
         listIds: [Number(process.env.BREVO_LIST_ID)],
         updateEnabled: true,
         attributes: {
-          FIRSTNAME: name || "",
+          FIRSTNAME: firstName,
+          LASTNAME: lastName,
         },
       }),
     });
