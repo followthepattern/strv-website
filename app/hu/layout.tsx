@@ -12,9 +12,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "STRV AI - magyar",
-  description: "AI Támogatott Fitness és Coaching App",
+export const metadata = {
+  title: "STRV.AI – AI Támogatott Fitness és Coaching Platform",
+  description:
+    "A STRV.AI egy AI Támogatott fitnesz és coaching platform, sportolóknak, edzőknek és mindenkinek, aki fejlődésre törekszik.",
+  openGraph: {
+    title: "STRV.AI – AI Támogatott fitnesz és coaching platform",
+    description:
+      "A STRV.AI egyetlen intelligens platformba integrálja a táplálkozás követést, edzést és a coachingot, hogy a fejlődés zökkenő mentes legyen.",
+    url: "https://strv.ai/hu",
+    siteName: "STRV.AI",
+    images: [
+      {
+        url: "/strv-thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "STRV.AI – AI Támogatott fitnesz és coaching platform",
+      },
+    ],
+    locale: "hu_HU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "STRV.AI – AI Támogatott fitnesz és coaching platform",
+    images: ["/strv-thumbnail.png"],
+  },
 };
 
 export default function RootLayout({
