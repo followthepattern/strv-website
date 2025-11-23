@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "STRV AI - magyar",
-  description: "AI Támogatott Productivity és Edzés Platform",
+  description: "AI Támogatott Fitness és Coaching App",
 };
 
 export default function RootLayout({
@@ -23,10 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <html lang="hu">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
+    </html>
   );
 }
