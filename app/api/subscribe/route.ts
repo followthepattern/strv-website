@@ -23,14 +23,22 @@ export async function POST(req: Request) {
     const lastName = names.slice(1, names.length).join(" ");
 
     let listId: number
+    let templateId: number
+    let redirectionUrl: string
 
     if (locale === "hu") {
       listId = STRV_HU_LIST_ID
+      templateId = 13
+      redirectionUrl = "https://strv.ai/hu/subscribed"
     } else {
       listId = STRV_EN_LIST_ID
+      templateId = 14
+      redirectionUrl = "https://strv.ai/en/subscribed"
     }
 
-    const res = await fetch("https://api.brevo.com/v3/contacts", {
+    console.info("template id", templateId)
+
+    const res = await fetch("https://api.brevo.com/v3/contacts/doubleOptinConfirmation", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,17 +47,20 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         email,
-        listIds: [Number(listId)],
+        includeListIds: [Number(listId)],
         updateEnabled: true,
         attributes: {
           FIRSTNAME: firstName,
           LASTNAME: lastName,
         },
+        templateId: templateId,
+        redirectionUrl: redirectionUrl,
       }),
     });
 
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
+      console.info("error", err)
       return NextResponse.json({ error: "Brevo error", details: err }, { status: res.status });
     }
 

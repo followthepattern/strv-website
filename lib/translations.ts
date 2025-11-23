@@ -2,6 +2,9 @@ export type TranslationKey = keyof typeof translations.en;
 
 export const translations = {
   en: {
+    // Technical
+    root: '/en',
+
     // Header
     siteTitle: 'STRV.AI',
 
@@ -82,10 +85,22 @@ export const translations = {
     calendarLegendCoaching: 'Coaching',
     calendarLegendActivity: 'Activity',
 
+    // Subscribed Page
+    subscribedTitle: 'Thank You for Subscribing!',
+    subscribedMessage: 'We\'re excited to have you on board. Check your inbox to confirm your subscription and be among the first to know when we launch.',
+    subscribedCheckEmail: 'Check Your Email',
+    subscribedCheckEmailDesc: 'We\'ve sent a confirmation email to your inbox. Please click the link to verify your subscription.',
+    subscribedWhatsNext: 'What\'s Next?',
+    subscribedWhatsNextDesc: 'You\'ll receive exclusive updates about our launch, early access opportunities, and tips to maximize your performance.',
+    subscribedBackHome: 'Back to Home',
+
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Built for champions.',
   },
   hu: {
+    // Technical
+    root: '/hu',
+
     // Header
     siteTitle: 'STRV.AI',
 
@@ -165,6 +180,15 @@ export const translations = {
     calendarLegendTraining: 'Edzés',
     calendarLegendCoaching: 'Coaching',
     calendarLegendActivity: 'Aktivitás',
+
+    // Subscribed Page
+    subscribedTitle: 'Köszönjük a Feliratkozást!',
+    subscribedMessage: 'Örülünk, hogy csatlakoztál hozzánk. Ellenőrizd a postaládád, hogy megerősítsd a feliratkozásod és légy az elsők között, akik értesülnek az indulásról.',
+    subscribedCheckEmail: 'Ellenőrizd az Emailedet',
+    subscribedCheckEmailDesc: 'Küldtünk egy megerősítő emailt a postaládádba. Kattints a linkre a feliratkozásod jóváhagyásához.',
+    subscribedWhatsNext: 'Mi a Következő Lépés?',
+    subscribedWhatsNextDesc: 'Exkluzív frissítéseket fogsz kapni az indulásról, korai hozzáférési lehetőségekről és tippeket a teljesítményed maximalizálásához.',
+    subscribedBackHome: 'Vissza a Főoldalra',
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',
