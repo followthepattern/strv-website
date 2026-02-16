@@ -65,9 +65,14 @@ export default function Home() {
                             <img src="/strv-white.svg" alt="STRV Logo" className="h-8 w-8 sm:h-12 sm:w-12" />
                             <span className="sm:text-xl font-bold text-white">{t("siteTitle")}</span>
                         </a>
-                        <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/hu" : "/"}>
-                            {locale == "en" ? "HU": "EN"}
-                        </a>
+                        <div className="flex items-center gap-4">
+                            <a className="text-sm sm:text-base font-medium text-white/70 hover:text-white transition-colors" href={locale == "en" ? "/en/features" : "/hu/features"}>
+                                {t("navFeatures")}
+                            </a>
+                            <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/hu" : "/"}>
+                                {locale == "en" ? "HU": "EN"}
+                            </a>
+                        </div>
                     </div>
 
                     <div className="relative z-10 max-w-3xl mx-4">
