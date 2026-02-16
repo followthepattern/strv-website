@@ -22,7 +22,7 @@ function Phase({ number, title, timeline, goal, status, statusColor, accentColor
         <div className="relative flex gap-4 sm:gap-8">
             {/* Timeline line */}
             <div className="flex flex-col items-center">
-                <div className={`w-10 h-10 sm:w-14 sm:h-14 rounded-full ${accentColor} flex items-center justify-center text-white font-bold text-xs sm:text-sm shrink-0 shadow-lg`}>
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-transparent border-2 border-white flex items-center justify-center text-white font-extrabold text-base sm:text-xl shrink-0">
                     {number}
                 </div>
                 {!isLast && (
@@ -130,7 +130,7 @@ export default function Features() {
                 {/* Phase 1 */}
                 <Phase
                     number="1"
-                    title={`${t("phase1Number")} — ${t("phase1Title")}`}
+                    title={t("phase1Title")}
                     timeline={t("phase1Timeline")}
                     goal={`${t("goalLabel")}: ${t("phase1Goal")}`}
                     status={t("phase1Status")}
@@ -149,7 +149,7 @@ export default function Features() {
                 {/* Phase 2 */}
                 <Phase
                     number="2"
-                    title={`${t("phase2Number")} — ${t("phase2Title")}`}
+                    title={t("phase2Title")}
                     timeline={t("phase2Timeline")}
                     goal={`${t("goalLabel")}: ${t("phase2Goal")}`}
                     status={t("phase2Status")}
@@ -166,7 +166,7 @@ export default function Features() {
                 {/* Phase 3 */}
                 <Phase
                     number="3"
-                    title={`${t("phase3Number")} — ${t("phase3Title")}`}
+                    title={t("phase3Title")}
                     timeline={t("phase3Timeline")}
                     goal={`${t("goalLabel")}: ${t("phase3Goal")}`}
                     status={t("phase3Status")}
@@ -182,7 +182,7 @@ export default function Features() {
                 {/* Phase 4 */}
                 <Phase
                     number="4"
-                    title={`${t("phase4Number")} — ${t("phase4Title")}`}
+                    title={t("phase4Title")}
                     timeline={t("phase4Timeline")}
                     goal={`${t("goalLabel")}: ${t("phase4Goal")}`}
                     status={t("phase4Status")}
@@ -205,7 +205,7 @@ export default function Features() {
                 {/* Phase 5 */}
                 <Phase
                     number="5"
-                    title={`${t("phase5Number")} — ${t("phase5Title")}`}
+                    title={t("phase5Title")}
                     timeline={t("phase5Timeline")}
                     goal={`${t("goalLabel")}: ${t("phase5Goal")}`}
                     status={t("phase5Status")}
