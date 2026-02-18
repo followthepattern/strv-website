@@ -66,7 +66,7 @@ export default function Home() {
                             <span className="sm:text-xl font-bold text-white">{t("siteTitle")}</span>
                         </a>
                         <div className="flex items-center gap-4">
-                            <a className="text-sm sm:text-base font-medium text-white/70 hover:text-white transition-colors" href={locale == "en" ? "/en/features" : "/hu/features"}>
+                            <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/en/features" : "/hu/features"}>
                                 {t("navFeatures")}
                             </a>
                             <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/hu" : "/"}>

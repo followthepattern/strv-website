@@ -379,7 +379,7 @@ export const translations = {
     // Status labels
     statusTesting: 'Tesztelés alatt',
     statusDevelopment: 'Fejlesztés alatt',
-    statusPlanned: 'Tervezett',
+    statusPlanned: 'Hamarosan',
     statusVision: 'Vízió',
     goalLabel: 'Cél',
     featuresPageBackHome: 'Vissza a Főoldalra',

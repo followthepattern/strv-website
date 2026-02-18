@@ -1,7 +1,6 @@
 'use client'
 
 import { useTranslation } from "@/hooks/useTranslation";
-import { TranslationKey } from "@/lib/translations";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { usePathname } from "next/navigation";
 
@@ -9,7 +8,6 @@ interface PhaseProps {
     number: string;
     title: string;
     timeline: string;
-    goal: string;
     status: string;
     statusColor: string;
     accentColor: string;
@@ -17,7 +15,7 @@ interface PhaseProps {
     isLast?: boolean;
 }
 
-function Phase({ number, title, timeline, goal, status, statusColor, accentColor, children, isLast }: PhaseProps) {
+function Phase({ number, title, timeline, status, statusColor, accentColor, children, isLast }: PhaseProps) {
     return (
         <div className="relative flex gap-4 sm:gap-8">
             {/* Timeline line */}
@@ -38,10 +36,6 @@ function Phase({ number, title, timeline, goal, status, statusColor, accentColor
                         <span className="text-xs sm:text-sm font-medium px-3 py-1 rounded-full bg-white/10 text-white/70 w-fit whitespace-nowrap">
                             {timeline}
                         </span>
-                    </div>
-
-                    <div className="mb-4 px-3 py-2 rounded-lg bg-white/5 border-l-4 border-teal-400">
-                        <span className="text-teal-300 text-sm font-semibold">{goal}</span>
                     </div>
 
                     <div className="mb-5 text-white/80">
@@ -97,8 +91,6 @@ export default function Features() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-sky-800 to-teal-950">
-            <div className="absolute inset-0 pointer-events-none bg-[url('/hexagons.png')] bg-repeat opacity-4" />
-
             {/* Header */}
             <header className="relative z-10 flex justify-between items-center px-6 pt-4 pb-2">
                 <a href={locale === "hu" ? "/hu" : "/"} className="flex items-center">
@@ -106,7 +98,7 @@ export default function Features() {
                     <span className="sm:text-xl font-bold text-white">{t("siteTitle")}</span>
                 </a>
                 <div className="flex items-center gap-4">
-                    <a className="text-sm sm:text-base font-medium text-white/70 hover:text-white transition-colors" href={locale === "hu" ? "/hu" : "/"}>
+                    <a className="sm:text-xl font-bold text-white" href={locale === "hu" ? "/hu" : "/"}>
                         {t("navHome")}
                     </a>
                     <a className="sm:text-xl font-bold text-white" href={locale === "en" ? "/hu/features" : "/en/features"}>
@@ -132,7 +124,7 @@ export default function Features() {
                     number="1"
                     title={t("phase1Title")}
                     timeline={t("phase1Timeline")}
-                    goal={`${t("goalLabel")}: ${t("phase1Goal")}`}
+
                     status={t("phase1Status")}
                     statusColor="text-green-400 bg-green-400/10"
                     accentColor="bg-green-500"
@@ -151,7 +143,7 @@ export default function Features() {
                     number="2"
                     title={t("phase2Title")}
                     timeline={t("phase2Timeline")}
-                    goal={`${t("goalLabel")}: ${t("phase2Goal")}`}
+
                     status={t("phase2Status")}
                     statusColor="text-yellow-400 bg-yellow-400/10"
                     accentColor="bg-yellow-500"
@@ -166,12 +158,12 @@ export default function Features() {
                 {/* Phase 3 */}
                 <Phase
                     number="3"
-                    title={t("phase3Title")}
+                    title={t("phase3Status")}
                     timeline={t("phase3Timeline")}
-                    goal={`${t("goalLabel")}: ${t("phase3Goal")}`}
-                    status={t("phase3Status")}
-                    statusColor="text-blue-400 bg-blue-400/10"
-                    accentColor="bg-blue-500"
+
+                    status={t("statusPlanned")}
+                    statusColor="text-purple-400 bg-purple-400/10"
+                    accentColor="bg-purple-500"
                 >
                     <FeatureList items={[
                         t("phase3Feature1"), t("phase3Feature2"), t("phase3Feature3"),
@@ -184,8 +176,8 @@ export default function Features() {
                     number="4"
                     title={t("phase4Title")}
                     timeline={t("phase4Timeline")}
-                    goal={`${t("goalLabel")}: ${t("phase4Goal")}`}
-                    status={t("phase4Status")}
+
+                    status={t("statusPlanned")}
                     statusColor="text-purple-400 bg-purple-400/10"
                     accentColor="bg-purple-500"
                 >
@@ -207,10 +199,10 @@ export default function Features() {
                     number="5"
                     title={t("phase5Title")}
                     timeline={t("phase5Timeline")}
-                    goal={`${t("goalLabel")}: ${t("phase5Goal")}`}
-                    status={t("phase5Status")}
-                    statusColor="text-rose-400 bg-rose-400/10"
-                    accentColor="bg-rose-500"
+
+                    status={t("statusPlanned")}
+                    statusColor="text-purple-400 bg-purple-400/10"
+                    accentColor="bg-purple-500"
                     isLast
                 >
                     <FeatureList items={[
