@@ -9,7 +9,7 @@ export const translations = {
     siteTitle: 'STRV.AI',
 
     // Hero Section
-    heroTitle: 'AI-Powered Fitness & Coaching Platform',
+    heroTitle: 'Chat-First AI Productivity App for Coaches & Athletes',
     heroDescription: 'For ambitious people and their coaches who want to stay organized, build strength, gain muscle, and maximize performance.',
     subscribeButton: 'Subscribe for Early Access',
     earlyAccessNote: 'Be the first to know when we launch. No spam, just performance.',
@@ -202,7 +202,7 @@ export const translations = {
     siteTitle: 'STRV.AI',
 
     // Hero Section
-    heroTitle: 'AI Támogatott Fitness és Coaching Platform',
+    heroTitle: 'Chat-First AI Produktivitási App Edzők és Sportolók Számára',
     heroDescription: 'Ambiciózus emberek és edzőik számára, akik szervezettek akarnak maradni, erőt építeni, izomtömeget növelni és maximalizálni a teljesítményüket.',
     subscribeButton: 'Biztosítom a helyem',
     earlyAccessNote: 'Légy az elsők között, aki értesül az indulásról. Nem spam, csak teljesítmény.',
