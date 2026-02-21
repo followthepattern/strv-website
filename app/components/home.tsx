@@ -246,7 +246,7 @@ export default function Home() {
                                             onChange={(e) => setConsent(e.target.checked)}
                                             className="mt-1"
                                         />
-                                        <span>
+                                        <span className="text-left">
                                             {t("consentText")}{" "}
                                             <a href="/privacy" className="underline" target="_blank">{t("privacyPolicy")}</a>.
                                         </span>

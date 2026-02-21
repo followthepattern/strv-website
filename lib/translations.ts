@@ -424,7 +424,7 @@ export const translations = {
 
     // Integrations Section
     integrationsTitle: 'Csatlakozik az eszközeidhez',
-    integrationsSubtitle: 'Azokkal az eszközökkel és appokkal működik, amelyeket már használsz — zökkenőmentesen.',
+    integrationsSubtitle: 'Azokkal az eszközökkel és appokkal működik, amelyeket már használsz.',
     integrationsWearables: 'Viselhető eszközök',
     integrationsMessaging: 'Üzenetküldés',
     integrationsHealth: 'Egészség és fitnesz',
