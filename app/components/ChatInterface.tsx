@@ -1,19 +1,9 @@
 'use client'
 
 import { Play, Send } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const waveBarHeights = [35, 55, 70, 45, 80, 60, 90, 50, 65, 40, 75, 55, 85, 45, 60, 70, 40, 80, 55, 65];
-
-type Message =
-  | { role: 'user'; type: 'voice'; duration: string }
-  | { role: 'user' | 'ai'; type: 'text'; text: string };
-
-const messages: Message[] = [
-  { role: 'user', type: 'voice', duration: '0:08' },
-  { role: 'ai', type: 'text', text: 'Logged! 5 sets × 5 reps — Squats 100 kg. Estimated 1RM: 133 kg (+3 kg this week). Keep it up 💪' },
-  { role: 'user', type: 'text', text: "What should I eat before tonight's session?" },
-  { role: 'ai', type: 'text', text: '2–3 hrs before training: ~50g carbs + 30g protein. Rice & chicken is a solid choice. Want me to add it to your nutrition plan?' },
-];
 
 function VoiceBubble({ duration }: { duration: string }) {
   return (
@@ -36,14 +26,23 @@ function VoiceBubble({ duration }: { duration: string }) {
 }
 
 export default function ChatInterface() {
+  const { t } = useTranslation();
+
+  const messages = [
+    { role: 'user' as const, type: 'voice' as const, duration: '0:08' },
+    { role: 'ai' as const, type: 'text' as const, text: t('chatAiMessage1') },
+    { role: 'user' as const, type: 'text' as const, text: t('chatUserMessage2') },
+    { role: 'ai' as const, type: 'text' as const, text: t('chatAiMessage2') },
+  ];
+
   return (
     <div className="w-full max-w-sm mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/20 flex flex-col bg-gradient-to-br from-sky-800 to-teal-900">
       {/* App bar */}
       <div className="flex items-center gap-3 px-4 py-3 bg-white/10 border-b border-white/10">
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-lime-400 to-teal-500 flex items-center justify-center text-white font-bold text-sm shrink-0">S</div>
         <div>
-          <p className="text-white text-sm font-semibold leading-tight">My Assistant</p>
-          <p className="text-white/50 text-xs">online</p>
+          <p className="text-white text-sm font-semibold leading-tight">{t('chatAssistantName')}</p>
+          <p className="text-white/50 text-xs">{t('chatOnline')}</p>
         </div>
       </div>
 
@@ -70,7 +69,7 @@ export default function ChatInterface() {
       <div className="flex items-center gap-2 px-4 py-3 bg-white/5 border-t border-white/10">
         <input
           type="text"
-          placeholder="Message STRV.AI..."
+          placeholder={t('chatInputPlaceholder')}
           className="flex-1 bg-white/10 rounded-full px-4 py-2 text-sm text-white placeholder-white/40 outline-none"
           readOnly
         />

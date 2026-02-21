@@ -191,6 +191,14 @@ export const translations = {
     goalLabel: 'Goal',
     featuresPageBackHome: 'Back to Home',
 
+    // Chat Interface
+    chatAssistantName: 'My Assistant',
+    chatOnline: 'online',
+    chatAiMessage1: 'Logged! 5 sets × 5 reps — Squats 100 kg. Estimated 1RM: 133 kg (+3 kg this week). Keep it up 💪',
+    chatUserMessage2: "Summarize Alex's progress from last month",
+    chatAiMessage2: 'Alex hit 9/12 sessions (+2 vs previous month). Squat up 7.5 kg, bodyweight stable. 3 missed sessions flagged — he cited fatigue.',
+    chatInputPlaceholder: 'Message STRV.AI...',
+
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Built for champions.',
   },
@@ -383,6 +391,14 @@ export const translations = {
     statusVision: 'Vízió',
     goalLabel: 'Cél',
     featuresPageBackHome: 'Vissza a Főoldalra',
+
+    // Chat Interface
+    chatAssistantName: 'Asszisztensem',
+    chatOnline: 'online',
+    chatAiMessage1: 'Naplózva! 5 sorozat × 5 ismétlés — Guggolás 100 kg. Becsült 1RM: 133 kg (+3 kg ezen a héten). Csak így tovább! 💪',
+    chatUserMessage2: 'Összegezd Alex múlt havi fejlődését',
+    chatAiMessage2: 'Alex 9/12 edzést teljesített (+2 az előző hónaphoz képest). Guggolása 7,5 kg-mal nőtt, testsúlya stabil. 3 hiányzott edzést jeleztem — fáradtságra hivatkozott.',
+    chatInputPlaceholder: 'Írj a STRV.AI-nak...',
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',
