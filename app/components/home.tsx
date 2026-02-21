@@ -6,6 +6,7 @@ import CalendarDayView from "./CalendarDayView";
 import VoiceToText from "./VoiceToText";
 import TrackingDashboard from "./TrackingDashboard";
 import ContactSection from "./ContactSection";
+import IntegrationsSection from "./IntegrationsSection";
 import ChatInterface from "./ChatInterface";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getLocaleFromPath } from "@/lib/i18n";
@@ -209,6 +210,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+                <IntegrationsSection />
                 <section className="pb-24 px-6 bg-white text-black/80">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-left md:text-center mb-16">

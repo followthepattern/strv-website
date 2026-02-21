@@ -9,7 +9,7 @@ export const translations = {
     siteTitle: 'STRV.AI',
 
     // Hero Section
-    heroTitle: 'Chat-First AI Productivity App for Coaches & Athletes',
+    heroTitle: 'Chat-First AI Powered Fitness & Coaching Platform',
     heroDescription: 'For ambitious people and their coaches who want to stay organized, build strength, gain muscle, and maximize performance.',
     subscribeButton: 'Subscribe for Early Access',
     earlyAccessNote: 'Be the first to know when we launch. No spam, just performance.',
@@ -191,6 +191,14 @@ export const translations = {
     goalLabel: 'Goal',
     featuresPageBackHome: 'Back to Home',
 
+    // Integrations Section
+    integrationsTitle: 'Connects with your tools',
+    integrationsSubtitle: 'Works with the devices and apps you already use — no friction, no switching.',
+    integrationsWearables: 'Wearables',
+    integrationsMessaging: 'Messaging',
+    integrationsHealth: 'Health & Fitness',
+    integrationsMore: 'More integrations coming soon.',
+
     // Tracking Dashboard
     dashboardTitle: "Today's Overview",
     dashboardSubtitle: 'Personal dashboard',
@@ -232,7 +240,7 @@ export const translations = {
     siteTitle: 'STRV.AI',
 
     // Hero Section
-    heroTitle: 'Chat-First AI Produktivitási App Edzők és Sportolók Számára',
+    heroTitle: 'Chat-First AI Támogatott Fitness és Coaching Platform',
     heroDescription: 'Ambiciózus emberek és edzőik számára, akik szervezettek akarnak maradni, erőt építeni, izomtömeget növelni és maximalizálni a teljesítményüket.',
     subscribeButton: 'Biztosítom a helyem',
     earlyAccessNote: 'Légy az elsők között, aki értesül az indulásról. Nem spam, csak teljesítmény.',
@@ -318,7 +326,7 @@ export const translations = {
     subscribedBackHome: 'Vissza a Főoldalra',
 
     // Navigation
-    navFeatures: 'Legjobb Funkciók',
+    navFeatures: 'Legjobb funkciók',
     navHome: 'Főoldal',
 
     // Features / Roadmap Page
@@ -413,6 +421,14 @@ export const translations = {
     statusVision: 'Vízió',
     goalLabel: 'Cél',
     featuresPageBackHome: 'Vissza a Főoldalra',
+
+    // Integrations Section
+    integrationsTitle: 'Csatlakozik az eszközeidhez',
+    integrationsSubtitle: 'Azokkal az eszközökkel és appokkal működik, amelyeket már használsz — zökkenőmentesen.',
+    integrationsWearables: 'Viselhető eszközök',
+    integrationsMessaging: 'Üzenetküldés',
+    integrationsHealth: 'Egészség és fitnesz',
+    integrationsMore: 'Hamarosan még több integráció érkezik.',
 
     // Tracking Dashboard
     dashboardTitle: 'Mai áttekintés',
