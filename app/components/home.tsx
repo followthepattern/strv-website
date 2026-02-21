@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { Card, Title, Body, FeatureFrame } from "./feature";
 import CalendarDayView from "./CalendarDayView";
 import VoiceToText from "./VoiceToText";
-import ProgressGraph from "./ProgressGraph";
+import TrackingDashboard from "./TrackingDashboard";
 import ContactSection from "./ContactSection";
 import ChatInterface from "./ChatInterface";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -177,7 +177,7 @@ export default function Home() {
                                     </Body>
                                 </Card>
                                 <FeatureFrame className="h-[580px]">
-                                    <ProgressGraph />
+                                    <TrackingDashboard />
                                 </FeatureFrame>
                             </div>
                             <div className="flex flex-col-reverse sm:flex-row gap-10">

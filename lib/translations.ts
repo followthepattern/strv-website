@@ -191,6 +191,28 @@ export const translations = {
     goalLabel: 'Goal',
     featuresPageBackHome: 'Back to Home',
 
+    // Tracking Dashboard
+    dashboardTitle: "Today's Overview",
+    dashboardSubtitle: 'Personal dashboard',
+    dashboardLive: 'Live',
+    dashboardKcal: 'kcal',
+    dashboardSleep: 'Sleep',
+    dashboardWeight: 'Body weight',
+    dashboardStreak: 'Day streak',
+    dashboardWeekTitle: 'This week',
+    dashboardMon: 'Mon',
+    dashboardTue: 'Tue',
+    dashboardWed: 'Wed',
+    dashboardThu: 'Thu',
+    dashboardFri: 'Fri',
+    dashboardRecentTitle: 'Recent activity',
+    dashboardActivity1: 'Bench Press',
+    dashboardActivity1Value: '100 kg · 5×5',
+    dashboardActivity2: 'Lunch logged',
+    dashboardActivity2Value: '720 kcal',
+    dashboardActivity3: 'Sleep logged',
+    dashboardActivity3Value: '7.5 h · 92%',
+
     // Chat Interface
     chatAssistantName: 'My Assistant',
     chatOnline: 'online',
@@ -296,7 +318,7 @@ export const translations = {
     subscribedBackHome: 'Vissza a Főoldalra',
 
     // Navigation
-    navFeatures: 'Fejlesztési terv',
+    navFeatures: 'Legjobb Funkciók',
     navHome: 'Főoldal',
 
     // Features / Roadmap Page
@@ -391,6 +413,28 @@ export const translations = {
     statusVision: 'Vízió',
     goalLabel: 'Cél',
     featuresPageBackHome: 'Vissza a Főoldalra',
+
+    // Tracking Dashboard
+    dashboardTitle: 'Mai áttekintés',
+    dashboardSubtitle: 'Személyes irányítópult',
+    dashboardLive: 'Élő',
+    dashboardKcal: 'kcal',
+    dashboardSleep: 'Alvás',
+    dashboardWeight: 'Testsúly',
+    dashboardStreak: 'Napos sorozat',
+    dashboardWeekTitle: 'Ezen a héten',
+    dashboardMon: 'H',
+    dashboardTue: 'K',
+    dashboardWed: 'Sz',
+    dashboardThu: 'Cs',
+    dashboardFri: 'P',
+    dashboardRecentTitle: 'Legutóbbi aktivitás',
+    dashboardActivity1: 'Fekvenyomás',
+    dashboardActivity1Value: '100 kg · 5×5',
+    dashboardActivity2: 'Ebéd naplózva',
+    dashboardActivity2Value: '720 kcal',
+    dashboardActivity3: 'Alvás naplózva',
+    dashboardActivity3Value: '7,5 h · 92%',
 
     // Chat Interface
     chatAssistantName: 'Asszisztensem',
