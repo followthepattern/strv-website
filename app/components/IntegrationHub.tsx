@@ -53,7 +53,7 @@ const items: HubItem[] = [
     ),
   },
   {
-    name: 'Apple Watch',
+    name: 'Smart Watches',
     bg: '#1C1C1E',
     cx: 28, cy: 69,
     icon: (
@@ -106,8 +106,8 @@ export default function IntegrationHub() {
 
       {/* Center — STRV */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-black shadow-2xl flex items-center justify-center">
-          <img src="/strv-white.svg" alt="STRV" className="w-14 h-14 sm:w-16 sm:h-16" />
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black shadow-2xl flex items-center justify-center">
+          <img src="/strv-white.svg" alt="STRV" className="w-13 h-13 sm:w-16 sm:h-16" />
         </div>
       </div>
 
