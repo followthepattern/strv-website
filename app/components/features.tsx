@@ -90,14 +90,15 @@ export default function Features() {
     const locale = getLocaleFromPath(pathname);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-sky-800 to-teal-950">
+        <div className="relative min-h-screen bg-gradient-to-br from-sky-800 to-teal-950">
+            <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
             {/* Header */}
             <header className="relative z-10 flex justify-between items-center px-6 pt-4 pb-2">
                 <a href={locale === "hu" ? "/hu" : "/"} className="flex items-center">
                     <img src="/strv-white.svg" alt="STRV Logo" className="h-8 w-8 sm:h-12 sm:w-12" />
                     <span className="sm:text-xl font-bold text-white">{t("siteTitle")}</span>
                 </a>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-8">
                     <a className="sm:text-xl font-bold text-white" href={locale === "hu" ? "/hu" : "/"}>
                         {t("navHome")}
                     </a>
