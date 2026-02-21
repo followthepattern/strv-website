@@ -1,6 +1,6 @@
 'use client'
 
-import { Play, Send } from 'lucide-react';
+import { Mic, Play, Send } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 
 const waveBarHeights = [35, 55, 70, 45, 80, 60, 90, 50, 65, 40, 75, 55, 85, 45, 60, 70, 40, 80, 55, 65];
@@ -67,6 +67,9 @@ export default function ChatInterface() {
 
       {/* Input */}
       <div className="flex items-center gap-2 px-4 py-3 bg-white/5 border-t border-white/10">
+        <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+          <Mic className="w-4 h-4 text-white/70" />
+        </button>
         <input
           type="text"
           placeholder={t('chatInputPlaceholder')}
