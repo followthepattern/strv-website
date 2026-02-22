@@ -31,11 +31,8 @@ function Phase({ number, title, timeline, status, statusColor, accentColor, chil
             {/* Content card */}
             <div className="pb-10 sm:pb-16 grow">
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 sm:p-8 hover:bg-white/8 transition-colors">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                    <div className="mb-4">
                         <h3 className="text-xl sm:text-2xl font-bold text-white">{title}</h3>
-                        <span className="text-xs sm:text-sm font-medium px-3 py-1 rounded-full bg-white/10 text-white/70 w-fit whitespace-nowrap">
-                            {timeline}
-                        </span>
                     </div>
 
                     <div className="mb-5 text-white/80">
@@ -135,7 +132,7 @@ export default function Features() {
                         t("phase1Feature4"), t("phase1Feature5"), t("phase1Feature6"),
                     ]} />
                     <SubSection title={t("phase1AiTitle")} items={[
-                        t("phase1Ai1"), t("phase1Ai2"), t("phase1Ai3"), t("phase1Ai4"),
+                        t("phase1Ai1"), t("phase1Ai2"), t("phase1Ai4"),
                     ]} />
                 </Phase>
 
