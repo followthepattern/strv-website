@@ -132,7 +132,7 @@ export default function Features() {
                         t("phase1Feature4"), t("phase1Feature5"), t("phase1Feature6"),
                     ]} />
                     <SubSection title={t("phase1AiTitle")} items={[
-                        t("phase1Ai1"), t("phase1Ai2"), t("phase1Ai4"),
+                        t("phase1Ai4"), t("phase1Ai2"),
                     ]} />
                 </Phase>
 
@@ -188,7 +188,7 @@ export default function Features() {
                     ]} />
                     <SubSection title={t("phase4SpecialGoal")} items={[
                         t("phase4Special1"), t("phase4Special2"), t("phase4Special3"),
-                        t("phase4Special4"), t("phase4Special5"),
+                        t("phase4Special4"),
                     ]} />
                 </Phase>
 
@@ -204,8 +204,8 @@ export default function Features() {
                     isLast
                 >
                     <FeatureList items={[
-                        t("phase5Feature1"), t("phase5Feature2"), t("phase5Feature3"),
-                        t("phase5Feature4"), t("phase5Feature5"), t("phase5Feature6"),
+                        t("phase5Feature1"),
+                        t("phase5Feature4"),
                     ]} />
                 </Phase>
             </section>
