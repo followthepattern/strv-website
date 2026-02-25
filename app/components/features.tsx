@@ -160,15 +160,18 @@ export default function Features() {
             items={[
               t("phase1Feature1"),
               t("phase1Feature2"),
+              t("phase1Feature9"),
               t("phase1Feature3"),
               t("phase1Feature4"),
               t("phase1Feature5"),
               t("phase1Feature6"),
+              t("phase1Feature7"),
+              t("phase1Feature8"),
             ]}
           />
           <SubSection
             title={t("phase1AiTitle")}
-            items={[t("phase1Ai1"), t("phase1Ai2")]}
+            items={[t("phase1Ai1"), t("phase1Ai2"), t("phase1Feature10")]}
           />
         </Phase>
 
