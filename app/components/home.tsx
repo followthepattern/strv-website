@@ -4,8 +4,10 @@ import classNames from "classnames";
 import { Card, Title, Body, FeatureFrame } from "./feature";
 import CalendarDayView from "./CalendarDayView";
 import VoiceToText from "./VoiceToText";
-import ProgressGraph from "./ProgressGraph";
+import TrackingDashboard from "./TrackingDashboard";
 import ContactSection from "./ContactSection";
+import IntegrationsSection from "./IntegrationsSection";
+import ChatInterface from "./ChatInterface";
 import { useTranslation } from "@/hooks/useTranslation";
 import { getLocaleFromPath } from "@/lib/i18n";
 import { usePathname } from "next/navigation";
@@ -56,88 +58,106 @@ export default function Home() {
     return (
         <div className="min-h-screen">
             <main className="flex flex-col">
-                <section className="relative flex flex-col py-22 p-2 sm:py-40 items-center text-left md:text-center bg-gradient-to-br from-sky-800 to-teal-950">
+                <section className="relative flex flex-col bg-gradient-to-br from-sky-800 to-teal-950 text-white">
 
                     <div className="absolute inset-0 pointer-events-none bg-[url('/hexagons.png')] bg-repeat opacity-4"></div>
 
-                    <div className="absolute top-0 left-0 flex justify-between w-full px-6 pt-4">
+                    {/* Nav */}
+                    <div className="relative z-10 flex justify-between w-full px-6 pt-4">
                         <a href="/" className="flex items-center">
                             <img src="/strv-white.svg" alt="STRV Logo" className="h-8 w-8 sm:h-12 sm:w-12" />
                             <span className="sm:text-xl font-bold text-white">{t("siteTitle")}</span>
                         </a>
-                        <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/hu" : "/"}>
-                            {locale == "en" ? "HU": "EN"}
-                        </a>
-                    </div>
-
-                    <div className="relative z-10 max-w-3xl mx-4">
-                        <h1 className="text-5xl font-extrabold sm:text-6xl md:animate-bounce [animation-duration:2s]">
-                            {t("heroTitle")}
-                        </h1>
-                        <p className="mt-4 text-lg sm:text-xl opacity-90 md:mx-30">
-                            {t("heroDescription")}
-                        </p>
-                        <div className="mt-8 max-w-md mx-auto">
-                            <form onSubmit={onSubmit} className="flex flex-col gap-3">
-                                <input
-                                    type="name"
-                                    required
-                                    placeholder={t("namePlaceholder")}
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                    className="border rounded-lg text-lg px-3 py-2"
-                                />
-                                <input
-                                    type="email"
-                                    required
-                                    placeholder={t("emailPlaceholder")}
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    className="border rounded-lg text-lg px-3 py-2"
-                                />
-                                {/* GDPR consent */}
-                                <label className="text-sm flex items-start gap-2">
-                                    <input
-                                        type="checkbox"
-                                        checked={consent}
-                                        onChange={(e) => setConsent(e.target.checked)}
-                                        className="mt-1"
-                                    />
-                                    <span className="text-left">
-                                        {t("consentText")}{" "}
-                                        <a href="/privacy" className="underline" target="_blank">{t("privacyPolicy")}</a>.
-                                    </span>
-                                </label>
-                                {/* Honeypot */}
-                                <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
-                                <button
-                                    type="submit"
-                                    disabled={status === "loading"}
-                                    className="rounded-xl bg-gradient-to-r bg-lime-700 hover:bg-lime-600 active:bg-lime-900 shadom-md px-4 space-x-1 py-3 text-white cursor-pointer font-bold flex text-lg justify-between"
-                                >
-                                    <div className="w-5"></div>
-                                    <div className="text-center grow">{t("subscribeButton")}</div>
-                                    <div className="w-5 flex items-center justify-end">
-                                        {status === 'loading' && (<SpinnerIcon className="h-5 w-5" />)}
-                                    </div>
-                                </button>
-                                {msg && (
-                                    <p className={classNames(
-                                        "bg-white p-1 rounded-md text-center", {
-                                        "text-red-600": status === "error",
-                                        "text-green-700": status !== "error"
-                                    }
-                                    )}>{msg}</p>
-                                )}
-                            </form>
+                        <div className="flex items-center gap-8">
+                            <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/en/features" : "/hu/features"}>
+                                {t("navFeatures")}
+                            </a>
+                            <a className="sm:text-xl font-bold text-white" href={locale == "en" ? "/hu" : "/"}>
+                                {locale == "en" ? "HU" : "EN"}
+                            </a>
                         </div>
                     </div>
-                    <div className="mt-4">
-                        <p className="opacity-70 text-center">{t("earlyAccessNote")}</p>
+
+                    {/* Hero content */}
+                    <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-14 sm:py-20 flex flex-col lg:flex-row items-center gap-12">
+                        {/* Left: title + form */}
+                        <div className="flex-1 w-full">
+                            <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl leading-tight">
+                                {t("heroTitle")}
+                            </h1>
+                            <p className="mt-4 text-lg sm:text-xl opacity-90 max-w-lg">
+                                {t("heroDescription")}
+                            </p>
+                            <div className="mt-8 max-w-md">
+                                <form onSubmit={onSubmit} className="flex flex-col gap-3">
+                                    <input
+                                        type="name"
+                                        required
+                                        placeholder={t("namePlaceholder")}
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                        className="border rounded-lg text-lg px-3 py-2"
+                                    />
+                                    <input
+                                        type="email"
+                                        required
+                                        placeholder={t("emailPlaceholder")}
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        className="border rounded-lg text-lg px-3 py-2"
+                                    />
+                                    {/* GDPR consent */}
+                                    <label className="text-sm flex items-start gap-2">
+                                        <input
+                                            type="checkbox"
+                                            checked={consent}
+                                            onChange={(e) => setConsent(e.target.checked)}
+                                            className="mt-1"
+                                        />
+                                        <span className="text-left">
+                                            {t("consentText")}{" "}
+                                            <a href="/privacy" className="underline" target="_blank">{t("privacyPolicy")}</a>.
+                                        </span>
+                                    </label>
+                                    {/* Honeypot */}
+                                    <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
+                                    <button
+                                        type="submit"
+                                        disabled={status === "loading"}
+                                        className="rounded-xl bg-gradient-to-r bg-lime-700 hover:bg-lime-600 active:bg-lime-900 shadom-md px-4 space-x-1 py-3 text-white cursor-pointer font-bold flex text-lg justify-between"
+                                    >
+                                        <div className="w-5"></div>
+                                        <div className="text-center grow">{t("subscribeButton")}</div>
+                                        <div className="w-5 flex items-center justify-end">
+                                            {status === 'loading' && (<SpinnerIcon className="h-5 w-5" />)}
+                                        </div>
+                                    </button>
+                                    {msg && (
+                                        <p className={classNames(
+                                            "bg-white p-1 rounded-md text-center", {
+                                            "text-red-600": status === "error",
+                                            "text-green-700": status !== "error"
+                                        }
+                                        )}>{msg}</p>
+                                    )}
+                                </form>
+                                <p className="mt-4 opacity-70 text-sm">{t("earlyAccessNote")}</p>
+                            </div>
+                        </div>
+
+                        {/* Right: chat interface — desktop only */}
+                        <div className="hidden lg:block lg:flex-1 lg:max-w-sm w-full">
+                            <ChatInterface />
+                        </div>
                     </div>
                 </section>
                 <section className="py-24 px-6 bg-white text-black/80">
                     <div className="max-w-6xl mx-auto">
+                        {/* Chat interface — mobile only, shown here on white background */}
+                        <div className="lg:hidden mb-16">
+                            <ChatInterface />
+                        </div>
+
                         <div className="text-left md:text-center mb-18 md:mb-36">
                             <h2 className="text-4xl font-bold mb-4 sm:mb-6 text-heading max-w-3xl mx-auto">
                                 {t("featuresTitle")}
@@ -158,7 +178,7 @@ export default function Home() {
                                     </Body>
                                 </Card>
                                 <FeatureFrame className="h-[580px]">
-                                    <ProgressGraph />
+                                    <TrackingDashboard />
                                 </FeatureFrame>
                             </div>
                             <div className="flex flex-col-reverse sm:flex-row gap-10">
@@ -190,6 +210,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+                <IntegrationsSection />
                 <section className="pb-24 px-6 bg-white text-black/80">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-left md:text-center mb-16">
@@ -225,7 +246,7 @@ export default function Home() {
                                             onChange={(e) => setConsent(e.target.checked)}
                                             className="mt-1"
                                         />
-                                        <span>
+                                        <span className="text-left">
                                             {t("consentText")}{" "}
                                             <a href="/privacy" className="underline" target="_blank">{t("privacyPolicy")}</a>.
                                         </span>
