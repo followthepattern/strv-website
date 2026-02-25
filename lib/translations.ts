@@ -144,7 +144,7 @@ export const translations = {
     phase3Feature2: 'Lab result analysis',
     phase3Feature3: 'MRI consultation',
     phase3Feature4: 'On-demand expert advice',
-    phase3Feature5: 'Document upload',
+    phase3Feature5: 'Document upload and analysis',
     phase3Feature6: 'Consultation sharing with coaches',
     phase3Status: 'STRV as a performance-supporting health platform.',
 
@@ -375,7 +375,7 @@ export const translations = {
     phase3Feature2: 'Laboreredmény elemzés',
     phase3Feature3: 'MRI konzultáció',
     phase3Feature4: 'On-demand szakértői tanácsadás',
-    phase3Feature5: 'Dokumentum feltöltés',
+    phase3Feature5: 'Dokumentum feltöltés és elemzés',
     phase3Feature6: 'Konzultáció megosztása edzővel',
     phase3Status: 'STRV mint teljesítmény-támogató egészség platform.',
 
@@ -409,7 +409,7 @@ export const translations = {
     phase5Feature1: 'STRV.AI mint sportesemény szponzor',
     phase5Feature2: 'Streaming platform',
     phase5Feature3: 'Teljesítmény optimalizáló rendszer',
-    phase5Feature4: 'UFC partneri álomcél',
+    phase5Feature4: 'Hivatalos UFC partner (álomcél)',
     phase5Feature5: 'Minden UFC harcos STRV.AI-t használ',
     phase5Feature6: 'Peak performance időzítés támogatása globálisan',
     phase5Status: 'A STRV.AI végső víziója.',
