@@ -331,7 +331,7 @@ export const translations = {
 
     // Features / Roadmap Page
     roadmapTitle: 'A STRV.AI fejlesztési lépései',
-    roadmapSubtitle: 'Az MVP-től a globális teljesítmény-platformig — itt az utunk.',
+    roadmapSubtitle: 'Az MVP-től a globális teljesítmény-platformig',
 
     // Phase 1
     phase1Number: '1. fázis',
@@ -345,7 +345,7 @@ export const translations = {
     phase1Feature5: 'Jegyzetelés',
     phase1Feature6: 'Naptárintegráció',
     phase1AiTitle: 'AI-alapú adminisztráció:',
-    phase1Ai1: 'Kalória becslés fotóból',
+    phase1Ai1: 'Kalória becslés fotó alapján',
     phase1Ai2: 'Chat alapú adatbevitel',
     phase1Ai3: 'Edzésrekord generálás képből',
     phase1Ai4: 'Strukturált rekord létrehozás beszélgetésből',
