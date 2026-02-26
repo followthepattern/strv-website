@@ -61,12 +61,12 @@ export default function VoiceToText() {
                 </div>
                 <div className="flex-1">
                   <div className="h-6 flex items-center gap-0.5">
-                    {[...Array(25)].map((_, i) => (
+                    {[9.7, 65.8, 35.1, 96.0, 96.5, 12.2, 42.4, 13.9, 26.2, 81.8, 68.4, 84.7, 59.5, 36.2, 82.2, 20.3, 72.9, 84.0, 68.8, 3.7, 32.6, 13.2, 72.7, 53.0, 36.6].map((h, i) => (
                       <div
                         key={i}
                         className="w-1 bg-sky-800 rounded-full"
                         style={{
-                          height: `${Math.random() * 100}%`,
+                          height: `${h}%`,
                           opacity: 0.7
                         }}
                       />
