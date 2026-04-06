@@ -3,175 +3,133 @@ import React from "react";
 export const metadata = {
   title: "Privacy Policy | STRV.AI",
   description:
-    "Privacy Policy for STRV.AI regarding email and name collection for subscriptions, compliant with GDPR.",
+    "Privacy Policy for STRV.AI – AI-powered coaching and productivity platform.",
 };
 
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen px-4 py-12 md:px-8 lg:px-16 bg-white text-gray-900">
       <div className="mx-auto w-full max-w-3xl">
-        <h1 className="text-3xl font-bold mb-4">STRV.AI Privacy Policy</h1>
+        <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
         <p className="text-sm text-gray-500 mb-8">
-          Last updated: <span className="font-medium">21th Nov 2025</span>
+          Effective date: <span className="font-medium">April 6, 2026</span>
         </p>
 
         <section className="space-y-4 mb-8">
           <p>
-            This Privacy Policy explains how <strong>STRV.AI</strong> (“we”,
-            “our”, “us”) collects, uses, and protects your personal data when
-            you subscribe for updates or early access.
-          </p>
-          <p>
-            We are committed to protecting your privacy and complying with the{" "}
-            <strong>General Data Protection Regulation (GDPR)</strong> and
-            applicable data protection laws.
+            STRV.AI (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) operates a coaching and
+            productivity platform designed to help users track fitness,
+            nutrition, and performance.
           </p>
         </section>
 
         <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">1. What Personal Data We Collect</h2>
-          <p>When you subscribe to our early access or newsletter list, we may collect:</p>
+          <h2 className="text-xl font-semibold">1. Information We Collect</h2>
+          <p>We may collect:</p>
           <ul className="list-disc list-inside space-y-1">
-            <li>Name</li>
-            <li>Email address</li>
+            <li>Account information (email, name)</li>
+            <li>
+              User-generated content (workouts, nutrition logs, messages)
+            </li>
+            <li>Device and usage data</li>
+            <li>Audio inputs (if voice features are used)</li>
+            <li>Calendar data (if you connect Google Calendar)</li>
           </ul>
-          <p>We do not collect sensitive personal information at this stage.</p>
         </section>
 
         <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">2. How We Use Your Data</h2>
-          <p>We use your personal data solely for the following purposes:</p>
+          <h2 className="text-xl font-semibold">2. Google User Data</h2>
+          <p>
+            If you choose to connect your Google account, STRV.AI may access
+            your Google Calendar data.
+          </p>
+          <p>We use this data strictly to:</p>
           <ul className="list-disc list-inside space-y-1">
-            <li>Sending launch updates and product news</li>
-            <li>Providing early access information</li>
-            <li>Communicating relevant announcements about STRV.AI</li>
+            <li>Display your schedule</li>
+            <li>Provide coaching insights</li>
+            <li>Create and manage reminders</li>
+          </ul>
+          <p>We do not:</p>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Sell your Google data</li>
+            <li>Use it for advertising</li>
+            <li>
+              Share it with third parties (except as required to operate the
+              service)
+            </li>
           </ul>
           <p>
-            We will <strong>never sell or share your information</strong> with
-            third parties for their own marketing purposes.
+            STRV.AI complies with the{" "}
+            <strong>Google API Services User Data Policy</strong>, including
+            Limited Use requirements.
           </p>
+        </section>
+
+        <section className="space-y-3 mb-8">
+          <h2 className="text-xl font-semibold">3. How We Use Information</h2>
+          <p>We use your data to:</p>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Provide and improve the service</li>
+            <li>Generate AI-based coaching insights</li>
+            <li>Sync and manage schedules</li>
+            <li>Communicate with you (notifications, updates)</li>
+          </ul>
         </section>
 
         <section className="space-y-3 mb-8">
           <h2 className="text-xl font-semibold">
-            3. Legal Basis for Processing (GDPR)
-          </h2>
-          <p>Under the GDPR, we rely on the following legal bases:</p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>
-              <strong>Consent</strong> (Article 6(1)(a)) – You voluntarily
-              provide your email and agree to receive updates.
-            </li>
-            <li>
-              <strong>Legitimate interest</strong> (Article 6(1)(f)) – We have
-              an interest in communicating relevant information about our
-              product to people who subscribed.
-            </li>
-          </ul>
-          <p>You may withdraw your consent at any time.</p>
-        </section>
-
-        <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">
-            4. How We Store and Protect Your Data
+            4. Data Storage &amp; Security
           </h2>
           <p>
-            We store your information securely using industry-standard safeguards
-            to prevent unauthorized access, alteration, or misuse.
-          </p>
-          <p>
-            Your data may be stored on secure servers provided by our email
-            service or hosting providers.
-          </p>
-          <p>
-            We take appropriate technical and organizational measures in line
-            with GDPR Article 32.
+            Your data is securely stored using industry-standard practices. We
+            take reasonable measures to protect against unauthorized access.
           </p>
         </section>
 
         <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">5. How Long We Keep Your Data</h2>
-          <p>
-            We retain your data <strong>until you unsubscribe</strong> or
-            request deletion.
-          </p>
-          <p>
-            If you unsubscribe, your email will be removed from our active
-            mailing list within a reasonable timeframe.
-          </p>
-        </section>
-
-        <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">6. Your GDPR Rights</h2>
-          <p>Under the GDPR, you have the right to:</p>
+          <h2 className="text-xl font-semibold">5. Data Sharing</h2>
+          <p>We do not sell your personal data.</p>
+          <p>We may share data only:</p>
           <ul className="list-disc list-inside space-y-1">
-            <li>Access your personal data</li>
-            <li>Correct inaccurate or incomplete data</li>
-            <li>Request deletion of your data (“right to be forgotten”)</li>
-            <li>Withdraw consent at any time</li>
-            <li>Request data portability</li>
-            <li>Restrict or object to processing</li>
+            <li>With service providers necessary to operate STRV.AI</li>
+            <li>If required by law</li>
           </ul>
-          <p>
-            To exercise any of these rights, please contact us at{" "}
-            <strong>csaba@followthepattern.net</strong>.
-          </p>
         </section>
 
         <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">7. Sharing Your Data</h2>
-          <p>We only share your personal data with:</p>
+          <h2 className="text-xl font-semibold">6. Your Rights</h2>
+          <p>You can:</p>
           <ul className="list-disc list-inside space-y-1">
-            <li>
-              Email delivery providers (for sending newsletters and updates)
-            </li>
-            <li>Hosting or infrastructure providers (for secure storage)</li>
+            <li>Request deletion of your data</li>
+            <li>Disconnect your Google account at any time</li>
           </ul>
+        </section>
+
+        <section className="space-y-3 mb-8">
+          <h2 className="text-xl font-semibold">7. Third-Party Services</h2>
           <p>
-            These providers act as <strong>data processors</strong>, and we take
-            steps to ensure they comply with GDPR requirements.
-          </p>
-          <p>
-            We do not share your data with advertisers or unrelated third
-            parties for their own marketing.
+            STRV.AI integrates with third-party services such as Google
+            Calendar. These services have their own privacy policies.
           </p>
         </section>
 
         <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">8. Cookies & Tracking</h2>
+          <h2 className="text-xl font-semibold">8. Changes</h2>
           <p>
-            Our website may use basic cookies or analytics tools to understand
-            traffic and improve the user experience.
-          </p>
-          <p>
-            Where required, we will request your consent before setting
-            non-essential cookies.
+            We may update this policy. Updates will be reflected on this page.
           </p>
         </section>
 
         <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">9. Contact Information</h2>
+          <h2 className="text-xl font-semibold">9. Contact</h2>
           <p>
-            If you have any questions about this Privacy Policy or wish to
-            exercise your rights, please contact us:
-          </p>
-          <p>
-            Email: <strong>csaba@followthepattern.net</strong>
-          </p>
-        </section>
-
-        <section className="space-y-3 mb-8">
-          <h2 className="text-xl font-semibold">
-            10. Changes to This Privacy Policy
-          </h2>
-          <p>
-            We may update this Privacy Policy from time to time. The “Last
-            updated” date at the top of this page will indicate the most recent
-            version.
-          </p>
-          <p>
-            We encourage you to review this page periodically to stay informed
-            about how we protect your data.
+            For questions, contact:{" "}
+            <a
+              href="mailto:csaba@followthepattern.net"
+              className="text-blue-600 hover:underline"
+            >
+              csaba@followthepattern.net
+            </a>
           </p>
         </section>
       </div>
