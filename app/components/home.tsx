@@ -89,6 +89,20 @@ export default function Home() {
                                 {t("heroDescription")}
                             </p>
                             <div className="mt-8 max-w-md">
+                                <a
+                                    href="https://app.strv.ai"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full rounded-xl bg-lime-700 hover:bg-lime-600 active:bg-lime-900 px-4 py-3 text-white font-bold text-lg text-center"
+                                >
+                                    {t("signUpFreeButton")}
+                                </a>
+                                <p className="mt-3 opacity-80 text-sm">{t("signUpFreeNote")}</p>
+                                <div className="mt-6 mb-4 flex items-center gap-3 opacity-70">
+                                    <div className="h-px bg-white/40 flex-1"></div>
+                                    <span className="text-xs uppercase tracking-wide">{t("orDivider")}</span>
+                                    <div className="h-px bg-white/40 flex-1"></div>
+                                </div>
                                 <form onSubmit={onSubmit} className="flex flex-col gap-3">
                                     <input
                                         type="name"
@@ -220,8 +234,22 @@ export default function Home() {
                             <p className="text-xl mb-10 max-w-3xl mx-auto">
                                 {t("ctaDescription")}
                             </p>
-                            <div className="flex justify-center">
-                                <form onSubmit={onSubmit} className="flex flex-col gap-3 max-w-md">
+                            <div className="flex flex-col items-center">
+                                <a
+                                    href="https://app.strv.ai"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full max-w-md rounded-xl bg-lime-700 hover:bg-lime-600 active:bg-lime-900 px-4 py-3 text-white font-bold text-lg text-center"
+                                >
+                                    {t("signUpFreeButton")}
+                                </a>
+                                <p className="mt-3 text-sm text-black/60">{t("signUpFreeNote")}</p>
+                                <div className="mt-6 mb-4 flex items-center gap-3 w-full max-w-md text-black/50">
+                                    <div className="h-px bg-black/20 flex-1"></div>
+                                    <span className="text-xs uppercase tracking-wide">{t("orDivider")}</span>
+                                    <div className="h-px bg-black/20 flex-1"></div>
+                                </div>
+                                <form onSubmit={onSubmit} className="flex flex-col gap-3 w-full max-w-md">
                                     <input
                                         type="name"
                                         required
