@@ -1,6 +1,3 @@
-import { useState } from "react";
-import SpinnerIcon from "../icons/SpinnerIcon";
-import classNames from "classnames";
 import { Card, Title, Body, FeatureFrame } from "./feature";
 import CalendarDayView from "./CalendarDayView";
 import VoiceToText from "./VoiceToText";
@@ -15,45 +12,8 @@ import { usePathname } from "next/navigation";
 export default function Home() {
     const { t } = useTranslation();
     const pathname = usePathname();
-    const [email, setEmail] = useState("");
-    const [name, setName] = useState("");
-    const [consent, setConsent] = useState(false);
-    const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
-    const [msg, setMsg] = useState("");
 
     const locale = getLocaleFromPath(pathname);
-
-    async function onSubmit(e: React.FormEvent) {
-        e.preventDefault();
-        if (!consent) {
-            setStatus("error");
-            setMsg(t("consentError")); return;
-        }
-        setStatus("loading"); setMsg("");
-
-        try {
-            const res = await fetch("/api/subscribe", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    email: email,
-                    name: name,
-                    locale: locale,
-                }),
-            });
-            const data = await res.json();
-            if (!res.ok) throw new Error(data?.error || t("subscriptionError"));
-            setStatus("ok");
-
-            setMsg(t("subscriptionSuccess"));
-            setEmail("");
-            setName("");
-            setConsent(false);
-        } catch (err: any) {
-            setStatus("error");
-            setMsg(err.message || "Something went wrong");
-        }
-    }
 
     return (
         <div className="min-h-screen">
@@ -80,7 +40,7 @@ export default function Home() {
 
                     {/* Hero content */}
                     <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-14 sm:py-20 flex flex-col lg:flex-row items-center gap-12">
-                        {/* Left: title + form */}
+                        {/* Left: title + sign up */}
                         <div className="flex-1 w-full">
                             <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl leading-tight">
                                 {t("heroTitle")}
@@ -98,64 +58,6 @@ export default function Home() {
                                     {t("signUpFreeButton")}
                                 </a>
                                 <p className="mt-3 opacity-80 text-sm">{t("signUpFreeNote")}</p>
-                                <div className="mt-6 mb-4 flex items-center gap-3 opacity-70">
-                                    <div className="h-px bg-white/40 flex-1"></div>
-                                    <span className="text-xs uppercase tracking-wide">{t("orDivider")}</span>
-                                    <div className="h-px bg-white/40 flex-1"></div>
-                                </div>
-                                <form onSubmit={onSubmit} className="flex flex-col gap-3">
-                                    <input
-                                        type="name"
-                                        required
-                                        placeholder={t("namePlaceholder")}
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        className="border rounded-lg text-lg px-3 py-2"
-                                    />
-                                    <input
-                                        type="email"
-                                        required
-                                        placeholder={t("emailPlaceholder")}
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        className="border rounded-lg text-lg px-3 py-2"
-                                    />
-                                    {/* GDPR consent */}
-                                    <label className="text-sm flex items-start gap-2">
-                                        <input
-                                            type="checkbox"
-                                            checked={consent}
-                                            onChange={(e) => setConsent(e.target.checked)}
-                                            className="mt-1"
-                                        />
-                                        <span className="text-left">
-                                            {t("consentText")}{" "}
-                                            <a href="/privacy" className="underline" target="_blank">{t("privacyPolicy")}</a>.
-                                        </span>
-                                    </label>
-                                    {/* Honeypot */}
-                                    <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
-                                    <button
-                                        type="submit"
-                                        disabled={status === "loading"}
-                                        className="rounded-xl bg-gradient-to-r bg-lime-700 hover:bg-lime-600 active:bg-lime-900 shadom-md px-4 space-x-1 py-3 text-white cursor-pointer font-bold flex text-lg justify-between"
-                                    >
-                                        <div className="w-5"></div>
-                                        <div className="text-center grow">{t("subscribeButton")}</div>
-                                        <div className="w-5 flex items-center justify-end">
-                                            {status === 'loading' && (<SpinnerIcon className="h-5 w-5" />)}
-                                        </div>
-                                    </button>
-                                    {msg && (
-                                        <p className={classNames(
-                                            "bg-white p-1 rounded-md text-center", {
-                                            "text-red-600": status === "error",
-                                            "text-green-700": status !== "error"
-                                        }
-                                        )}>{msg}</p>
-                                    )}
-                                </form>
-                                <p className="mt-4 opacity-70 text-sm">{t("earlyAccessNote")}</p>
                             </div>
                         </div>
 
@@ -244,63 +146,6 @@ export default function Home() {
                                     {t("signUpFreeButton")}
                                 </a>
                                 <p className="mt-3 text-sm text-black/60">{t("signUpFreeNote")}</p>
-                                <div className="mt-6 mb-4 flex items-center gap-3 w-full max-w-md text-black/50">
-                                    <div className="h-px bg-black/20 flex-1"></div>
-                                    <span className="text-xs uppercase tracking-wide">{t("orDivider")}</span>
-                                    <div className="h-px bg-black/20 flex-1"></div>
-                                </div>
-                                <form onSubmit={onSubmit} className="flex flex-col gap-3 w-full max-w-md">
-                                    <input
-                                        type="name"
-                                        required
-                                        placeholder={t("namePlaceholder")}
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        className="border rounded-lg text-lg px-3 py-2"
-                                    />
-                                    <input
-                                        type="email"
-                                        required
-                                        placeholder={t("emailPlaceholder")}
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        className="border rounded-lg text-lg px-3 py-2"
-                                    />
-                                    {/* GDPR consent */}
-                                    <label className="text-sm flex items-start gap-2">
-                                        <input
-                                            type="checkbox"
-                                            checked={consent}
-                                            onChange={(e) => setConsent(e.target.checked)}
-                                            className="mt-1"
-                                        />
-                                        <span className="text-left">
-                                            {t("consentText")}{" "}
-                                            <a href="/privacy" className="underline" target="_blank">{t("privacyPolicy")}</a>.
-                                        </span>
-                                    </label>
-                                    {/* Honeypot */}
-                                    <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
-                                    <button
-                                        type="submit"
-                                        disabled={status === "loading"}
-                                        className="rounded-xl bg-gradient-to-r bg-sky-900 hover:bg-sky-700 active:bg-sky-950 shadom-md px-4 py-3 text-white cursor-pointer font-bold flex text-lg justify-between"
-                                    >
-                                        <div className="w-5"></div>
-                                        <div className="text-center grow">{t("subscribeButton")}</div>
-                                        <div className="w-5 flex items-center justify-end">
-                                            {status === 'loading' && (<SpinnerIcon className="h-5 w-5" />)}
-                                        </div>
-                                    </button>
-                                    {msg && (
-                                        <p className={classNames(
-                                            "p-1 rounded-md text-center", {
-                                            "text-red-600": status === "error",
-                                            "text-green-700": status !== "error"
-                                        }
-                                        )}>{msg}</p>
-                                    )}
-                                </form>
                             </div>
                         </div>
                     </div>
