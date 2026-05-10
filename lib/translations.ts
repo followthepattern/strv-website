@@ -226,7 +226,7 @@ export const translations = {
     siteTitle: 'STRV.AI',
 
     // Hero Section
-    heroTitle: 'AI-alapú egészség- és teljesítményplatform a modern edzéshez',
+    heroTitle: 'AI-alapú egészség és teljesítményplatform modern edzéshez.',
     heroDescription: 'Coaching, követés és fejlett egészségügyi elemzés egy rendszerben.',
     signUpFreeButton: 'Regisztrálj ingyenesen',
     signUpFreeNote: 'A STRV.AI már elérhető — kezdd el használni ingyen még ma.',
