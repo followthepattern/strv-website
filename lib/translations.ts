@@ -10,7 +10,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: 'AI-powered health & performance platform for modern coaching',
-    heroDescription: 'Coaching, tracking, and advanced health analysis in one system.',
+    heroDescription: 'For coaches, athletes, and anyone who wants to improve their health and performance.',
     signUpFreeButton: 'Sign Up for Free',
     signUpFreeNote: 'STRV.AI is live — start using it for free today.',
 
@@ -227,7 +227,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: 'AI-alapú egészség és teljesítményplatform modern edzéshez.',
-    heroDescription: 'Coaching, követés és fejlett egészségügyi elemzés egy rendszerben.',
+    heroDescription: 'Edzőknek, sportolóknak és mindenkinek, aki javítani szeretné egészségét és teljesítményét.',
     signUpFreeButton: 'Regisztrálj ingyenesen',
     signUpFreeNote: 'A STRV.AI már elérhető — kezdd el használni ingyen még ma.',
 
