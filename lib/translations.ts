@@ -9,19 +9,10 @@ export const translations = {
     siteTitle: 'STRV.AI',
 
     // Hero Section
-    heroTitle: 'Chat-First AI Powered Fitness & Coaching Platform',
-    heroDescription: 'For ambitious people and their coaches who want to stay organized, build strength, gain muscle, and maximize performance.',
-    subscribeButton: 'Subscribe for Early Access',
-    earlyAccessNote: 'Be the first to know when we launch. No spam, just performance.',
-
-    // Form Fields
-    namePlaceholder: 'Jon Jones',
-    emailPlaceholder: 'you@example.com',
-    consentText: 'I agree to receive emails and accept the',
-    privacyPolicy: 'Privacy Policy',
-    consentError: 'Please accept the privacy notice.',
-    subscriptionError: 'Subscription failed',
-    subscriptionSuccess: 'Thanks! Check your inbox to confirm.',
+    heroTitle: 'AI-powered health & performance platform for modern coaching',
+    heroDescription: 'For coaches, athletes, and anyone who wants to improve their health and performance.',
+    signUpFreeButton: 'Sign Up for Free',
+    signUpFreeNote: 'STRV.AI is live — start using it for free today.',
 
     // Features Section
     featuresTitle: 'STRV AI brings nutrition, fitness, and coaching together in one smart platform',
@@ -84,15 +75,6 @@ export const translations = {
     calendarLegendTraining: 'Training',
     calendarLegendCoaching: 'Coaching',
     calendarLegendActivity: 'Activity',
-
-    // Subscribed Page
-    subscribedTitle: 'Thank You for Subscribing!',
-    subscribedMessage: 'We\'re excited to have you on board. Check your inbox to confirm your subscription and be among the first to know when we launch.',
-    subscribedCheckEmail: 'Check Your Email',
-    subscribedCheckEmailDesc: 'We\'ve sent a confirmation email to your inbox. Please click the link to verify your subscription.',
-    subscribedWhatsNext: 'What\'s Next?',
-    subscribedWhatsNextDesc: 'You\'ll receive exclusive updates about our launch, early access opportunities, and tips to maximize your performance.',
-    subscribedBackHome: 'Back to Home',
 
     // Navigation
     navFeatures: 'Roadmap',
@@ -244,19 +226,10 @@ export const translations = {
     siteTitle: 'STRV.AI',
 
     // Hero Section
-    heroTitle: 'Chat-First AI Támogatott Fitness és Coaching Platform',
-    heroDescription: 'Ambiciózus emberek és edzőik számára, akik szervezettek akarnak maradni, erőt építeni, izomtömeget növelni és maximalizálni a teljesítményüket.',
-    subscribeButton: 'Biztosítom a helyem',
-    earlyAccessNote: 'Légy az elsők között, aki értesül az indulásról. Nem spam, csak teljesítmény.',
-
-    // Form Fields
-    namePlaceholder: 'Kovács János',
-    emailPlaceholder: 'te@pelda.com',
-    consentText: 'Elfogadom, hogy emaileket kapjak és elfogadom az',
-    privacyPolicy: 'Adatvédelmi Irányelveket',
-    consentError: 'Kérjük, fogadd el az adatvédelmi nyilatkozatot.',
-    subscriptionError: 'A feliratkozás sikertelen',
-    subscriptionSuccess: 'Köszönjük! Ellenőrizd a beérkező leveleidet a megerősítéshez.',
+    heroTitle: 'AI-alapú egészség és teljesítményplatform modern edzéshez.',
+    heroDescription: 'Edzőknek, sportolóknak és mindenkinek, aki javítani szeretné egészségét és teljesítményét.',
+    signUpFreeButton: 'Regisztrálj ingyenesen',
+    signUpFreeNote: 'A STRV.AI már elérhető — kezdd el használni ingyen még ma.',
 
     // Features Section
     featuresTitle: 'Táplálkozás, fitnesz és coaching egy intelligens platformon.',
@@ -319,15 +292,6 @@ export const translations = {
     calendarLegendTraining: 'Edzés',
     calendarLegendCoaching: 'Coaching',
     calendarLegendActivity: 'Aktivitás',
-
-    // Subscribed Page
-    subscribedTitle: 'Köszönjük a Feliratkozást!',
-    subscribedMessage: 'Örülünk, hogy csatlakoztál hozzánk. Ellenőrizd a postaládád, hogy megerősítsd a feliratkozásod és légy az elsők között, akik értesülnek az indulásról.',
-    subscribedCheckEmail: 'Ellenőrizd az Emailedet',
-    subscribedCheckEmailDesc: 'Küldtünk egy megerősítő emailt a postaládádba. Kattints a linkre a feliratkozásod jóváhagyásához.',
-    subscribedWhatsNext: 'Mi a Következő Lépés?',
-    subscribedWhatsNextDesc: 'Exkluzív frissítéseket fogsz kapni az indulásról, korai hozzáférési lehetőségekről és tippeket a teljesítményed maximalizálásához.',
-    subscribedBackHome: 'Vissza a Főoldalra',
 
     // Navigation
     navFeatures: 'Legjobb funkciók',
