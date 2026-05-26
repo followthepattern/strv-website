@@ -217,6 +217,8 @@ export const translations = {
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Built for champions.',
+    footerPrivacy: 'Privacy Policy',
+    footerTerms: 'Terms of Service',
   },
   hu: {
     // Technical
@@ -434,5 +436,7 @@ export const translations = {
 
     // Footer
     footerCopyright: 'FOLLOWTHEPATTERN KFT, Bajnokoknak feljesztve.',
+    footerPrivacy: 'Adatvédelmi Irányelvek',
+    footerTerms: 'Felhasználási Feltételek',
   }
 } as const;

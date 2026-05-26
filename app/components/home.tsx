@@ -152,7 +152,11 @@ export default function Home() {
                 </section>
                 <ContactSection />
             </main>
-            <footer className="my-5 flex items-center justify-center">
+            <footer className="my-5 flex flex-col items-center justify-center gap-2">
+                <nav className="flex items-center gap-4">
+                    <a href="/privacy" className="text-xs text-gray-500 underline hover:text-gray-700">{t("footerPrivacy")}</a>
+                    <a href="/terms" className="text-xs text-gray-500 underline hover:text-gray-700">{t("footerTerms")}</a>
+                </nav>
                 <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} {t("footerCopyright")}</p>
             </footer>
         </div>
