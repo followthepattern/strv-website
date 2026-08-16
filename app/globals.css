@@ -1,19 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ededed;
-  --foreground: #ededed;
+  --paper: #fbfaf5;
+  --ink: #11110f;
+  --muted-ink: rgb(17 17 15 / 0.55);
+  --background: #d8d8d0;
+  --foreground: var(--ink);
+  --page-edge: 4rem;
+
+  --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  background: var(--background);
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 4px;
+}
+
+@media (max-width: 920px) {
+  :root {
+    --page-edge: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-edge: 1rem;
+  }
 }

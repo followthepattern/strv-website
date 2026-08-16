@@ -1,25 +1,29 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
+  axes: ["wdth"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
 });
 
 export const metadata = {
-  title: "STRV.AI – AI Powered fitness & coaching platform",
+  metadataBase: new URL("https://strv.ai"),
+  title: "STRV.AI - AI Powered Productivity App",
   description:
-    "STRV.AI is an AI-assisted fitness and coaching platform designed for athletes, coaches, and anyone striving for growth.",
+    "STRV brings business, tasks, health, and business workflows together for people striving to reach their potential.",
   openGraph: {
-    title: "STRV.AI – AI Powered fitness & coaching platform",
+    title: "STRV.AI - AI Powered Productivity App",
     description:
-      "STRV.AI integrates nutrition, fitness, and coaching into one intelligent platform to help you stay on track.",
+      "STRV brings business, tasks, health, and business workflows together for people striving to reach their potential.",
     url: "https://strv.ai",
     siteName: "STRV.AI",
     images: [
@@ -27,7 +31,7 @@ export const metadata = {
         url: "/strv-thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "STRV.AI – AI Powered fitness & coaching platform",
+        alt: "STRV.AI",
       },
     ],
     locale: "en_US",
@@ -35,7 +39,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "STRV.AI – AI Powered fitness & coaching platform",
+    title: "STRV.AI - AI Powered Productivity App",
     images: ["/strv-thumbnail.png"],
   },
 };
@@ -48,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${archivo.variable} ${plexMono.variable} antialiased`}
       >
         {children}
       </body>

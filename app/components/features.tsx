@@ -1,8 +1,6 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
-import { getLocaleFromPath } from "@/lib/i18n";
-import { usePathname } from "next/navigation";
 
 interface PhaseProps {
   number: string;
@@ -39,7 +37,7 @@ function Phase({
 
       {/* Content card */}
       <div className="pb-10 sm:pb-16 grow">
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 sm:p-8 hover:bg-white/8 transition-colors">
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 sm:p-8 hover:bg-white/8">
           <div className="mb-4">
             <h3 className="text-xl sm:text-2xl font-bold text-white">
               {title}
@@ -94,8 +92,6 @@ function SubSection({ title, items }: { title: string; items: string[] }) {
 
 export default function Features() {
   const { t } = useTranslation();
-  const pathname = usePathname();
-  const locale = getLocaleFromPath(pathname);
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-sky-800 to-teal-950">
@@ -109,7 +105,7 @@ export default function Features() {
       ></div>
       {/* Header */}
       <header className="relative z-10 flex justify-between items-center px-6 pt-4 pb-2">
-        <a href={locale === "hu" ? "/hu" : "/"} className="flex items-center">
+        <a href="/" className="flex items-center">
           <img
             src="/strv-white.svg"
             alt="STRV Logo"
@@ -122,15 +118,9 @@ export default function Features() {
         <div className="flex items-center gap-8">
           <a
             className="sm:text-xl font-bold text-white"
-            href={locale === "hu" ? "/hu" : "/"}
+            href="/"
           >
             {t("navHome")}
-          </a>
-          <a
-            className="sm:text-xl font-bold text-white"
-            href={locale === "en" ? "/hu/features" : "/en/features"}
-          >
-            {locale === "en" ? "HU" : "EN"}
           </a>
         </div>
       </header>
@@ -271,8 +261,8 @@ export default function Features() {
       {/* Back to Home */}
       <section className="relative z-10 text-center pb-16">
         <a
-          href={locale === "hu" ? "/hu" : "/"}
-          className="inline-block px-6 py-3 rounded-xl bg-lime-700 hover:bg-lime-600 active:bg-lime-900 text-white font-bold transition-colors"
+          href="/"
+          className="inline-block px-6 py-3 rounded-xl bg-lime-700 hover:bg-lime-600 active:bg-lime-900 text-white font-bold"
         >
           {t("featuresPageBackHome")}
         </a>
